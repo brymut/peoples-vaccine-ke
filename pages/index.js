@@ -37,7 +37,7 @@ export default function IndexPage() {
             WebkitTextFillColor: 'white',
             WebkitTextStrokeWidth: '2px',
             WebkitTextStrokeColor: '#6930C3'
-          }} className="text-5xl mt-12">Our demands  ↓ ↓ ↓</h1>
+          }} className="text-5xl mt-12">Our demands</h1>
         </div>
         {demands.map(demand => {
           demandCount++;
