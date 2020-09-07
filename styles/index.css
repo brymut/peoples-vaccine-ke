@@ -2,11 +2,12 @@
 
 /* Write your own custom base styles here */
 @font-face {
-  font-family: 'Cubano';
+  font-family: 'Cubano-Regular';
+  src: url('/fonts/cubano-webfont.woff2') format('woff2'),
+    url('/fonts/cubano-webfont.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Cubano'), url(/fonts/Cubano.ttf) format('ttf');
+
 }
 
 /* Start purging... */

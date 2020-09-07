@@ -33,7 +33,7 @@ export default function IndexPage() {
         <div>
           <h1 style={{
             color: 'white',
-            fontFamily: 'Cubano',
+            fontFamily: 'Cubano-Regular',
             WebkitTextFillColor: 'white',
             WebkitTextStrokeWidth: '2px',
             WebkitTextStrokeColor: '#6930C3'
@@ -45,7 +45,7 @@ export default function IndexPage() {
             <div className='mt-8' key={demandCount}>
               <h2 style={{
                 color: 'white',
-                fontFamily: 'Cubano',
+                fontFamily: 'Cubano-Regular',
                 WebkitTextFillColor: 'white',
                 WebkitTextStrokeWidth: '1px',
                 WebkitTextStrokeColor: '#6930C3',

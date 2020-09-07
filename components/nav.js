@@ -7,7 +7,7 @@ export default function Nav() {
     <nav className="lg:mx-32 my-8">
       <h1 style={{
         color: 'white',
-        fontFamily: 'Cubano',
+        fontFamily: 'Cubano-Regular',
         WebkitTextFillColor: 'white',
         WebkitTextStrokeWidth: '1px',
         WebkitTextStrokeColor: '#6930C3',
@@ -15,7 +15,7 @@ export default function Nav() {
       }} className="text-3xl lg:hidden">#PeoplesVaccineKE</h1>
       <h2 style={{
         color: 'white',
-        fontFamily: 'Cubano',
+        fontFamily: 'Cubano-Regular',
         WebkitTextFillColor: 'white',
         WebkitTextStrokeWidth: '0.5px',
         WebkitTextStrokeColor: '#6930C3',
@@ -86,14 +86,14 @@ export default function Nav() {
         <li>
           <h1 style={{
             color: 'white',
-            fontFamily: 'Cubano',
+            fontFamily: 'Cubano-Regular',
             WebkitTextFillColor: 'white',
             WebkitTextStrokeWidth: '2px',
             WebkitTextStrokeColor: '#6930C3'
           }} className="hidden lg:block text-5xl">#PeoplesVaccineKE</h1>
           <h2 style={{
             color: 'white',
-            fontFamily: 'Cubano',
+            fontFamily: 'Cubano-Regular',
             WebkitTextFillColor: 'white',
             WebkitTextStrokeWidth: '1px',
             WebkitTextStrokeColor: '#6930C3',
