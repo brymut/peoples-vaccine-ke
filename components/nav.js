@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 
 export default function Nav() {
   const router = useRouter()
+  console.log(router.pathname)
   return (
     <nav className="lg:mx-32 my-8">
       <h1 style={{
@@ -12,7 +13,7 @@ export default function Nav() {
         WebkitTextStrokeWidth: '1px',
         WebkitTextStrokeColor: '#6930C3',
         textAlign: 'center'
-      }} className="text-3xl lg:hidden">#PeoplesVaccineKE</h1>
+      }} className="text-3xl md:text-4xl lg:hidden">#PeoplesVaccineKE</h1>
       <h2 style={{
         color: 'white',
         fontFamily: 'Cubano-Regular',
@@ -21,8 +22,7 @@ export default function Nav() {
         WebkitTextStrokeColor: '#6930C3',
         textAlign: 'center'
       }} className="lg:hidden text-sm">No one is safe until we are all safe</h2>
-      <ul className='lg:hidden flex justify-around mt-4'>
-
+      <ul className='flex justify-around lg:hidden mt-4'>
         {
           router.pathname === '/contact' ? null :
             <li>
@@ -31,9 +31,6 @@ export default function Nav() {
               </Link>
             </li>
         }
-
-
-
         {
           router.pathname === '/shareyourvoice' ? null :
             <li>
@@ -42,9 +39,6 @@ export default function Nav() {
               </Link>
             </li>
         }
-
-
-
         {
           router.pathname === '/' ? null :
             <li>
@@ -53,8 +47,6 @@ export default function Nav() {
               </Link>
             </li>
         }
-
-
         {
           router.pathname === '/resources' ? null :
             <li>
@@ -64,17 +56,15 @@ export default function Nav() {
             </li>
         }
       </ul>
-      <ul className="flex lg:justify-between lg:items-center">
-        <li className='hidden lg:block'>
+      <ul className="hidden lg:flex lg:justify-between lg:items-center">
+        <li>
           {
             router.pathname === '/contact' ? null : <>
               <Link href="/contact">
                 <a style={{ color: '#7400B8', fontFamily: 'Pt Sans' }} className="no-underline">Contact</a>
               </Link>
-              <div className='hidden lg:block'>
-                <br></br>
-                <br></br>
-              </div>
+              <br></br>
+              <br></br>
             </>
           }
           {
@@ -100,9 +90,11 @@ export default function Nav() {
             textAlign: 'center'
           }} className="hidden lg:block text-xl">No one is safe until we are all safe</h2>
           {
-            router.pathname === '/' ? null : <Link href="/">
-              <a style={{ color: '#7400B8', fontFamily: 'Pt Sans', margin: '35%' }} className="no-underline mt-10 hidden lg:block">Read our Demands</a>
-            </Link>}
+            router.pathname === '/' ? null :
+              <Link href="/">
+                <a style={{ color: '#7400B8', fontFamily: 'Pt Sans' }} className="no-underline mt-5 text-center hidden lg:block">Read our Demands</a>
+              </Link>
+          }
 
         </li>
         <ul className="flex justify-between items-center space-x-4">
