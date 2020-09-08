@@ -53,7 +53,7 @@ export default function IndexPage() {
               }} className="text-5xl mt-10">{demandCount}</h2>
               <div className='mx-12 lg:flex lg:mx-48 mt-12'>
                 <p className='lg:text-xl'>{demand}</p>
-                <img src='/images/adrianna-van-groningen-NvD9zZ7nn8Q-unsplash.jpg' className="w-2/3 mx-auto mt-8 lg:ml-8 lg:w-1/2 lg:mt-0" />
+                <img src='/images/adrianna-van-groningen-NvD9zZ7nn8Q-unsplash.jpg' className="w-2/3 mx-auto mt-8 lg:ml-8 lg:w-2/6 lg:h-64 object-contain lg:mt-0" />
               </div>
             </div>
           )
