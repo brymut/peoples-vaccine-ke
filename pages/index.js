@@ -1,16 +1,30 @@
 import Nav from '../components/nav'
 import Head from 'next/head'
+import DirectusSDK from "@directus/sdk-js";
 
-export default function IndexPage() {
-  const demands = [
-    'Kenyans must be made aware of the discovery and once it is within the Kenyan borders. The government of Kenya in collaboration with the ministry of health, must publicly share any relevant news on the discovery of the COVID-19 vaccine and it’s whereabouts within the Kenyan borders',
-    'The vaccine should be free of charge for all Kenyans. The Kenyan Government should not put a price tag on the COVID - 19 vaccine, so as to ensure all Kenyans regardless of status quo, class or privilege are able to get it with no monetary conditions.',
-    'The vaccine should be accessible to all kenyans and all 47 counties. The Kenyan government should make necessary arrangements with the Ministry of Health to establish temporary, moving clinics with well equipped healthcare personnel to administer the vaccine to all devolved areas of the state at a county-level. The government should make necessary arrangements to make door to door vaccine availability for those who are unable to leave their homes and set camps to administer the vaccine at large without any form of prejudice, discrimination or conditions.',
-    'Frontline healthcare workers and immediate hospital staff must be given priority in accessing the COVID-19 vaccine. This is the least the Kenyan government can do after stealing and mismanaging funds that were supposed to ensure protection of healthcare workers and combatting COVID-19, risking the lives of the frontline healthcare workers.',
-    'The Kenyan government must ensure public funding allocated for the COVID-19 vaccine is transparent and ensure accountability to Kenyans at large.',
-    'The government must engage local and grassroots organizations and partners to fully educate and raise awareness about the vaccine in all our communities nationwide. In this case, the government working with healthcare practitioners in the country must also educate the nation on the negative side-effects of the vaccine in our bodies. '
-  ]
-  let demandCount = 0;
+export async function getStaticProps() {
+  const demands = []
+  const client = new DirectusSDK({
+    url: "https://peoples-vaccine-ke-directus-sbw4jzw6ja-uc.a.run.app",
+    project: "peoples-vaccine",
+  })
+
+  await client.getItems('demands')
+    .then(data => {
+      data.data.map(demand => {
+        demands.push(demand)
+      })
+    })
+    .catch(error => console.log(error))
+  return {
+    props: {
+      demands
+    },
+    revalidate: 1,
+  }
+}
+
+export default function IndexPage({ demands }) {
   return (
     <>
       <Head>
@@ -40,9 +54,8 @@ export default function IndexPage() {
           }} className="text-5xl mt-12">Our demands</h1>
         </div>
         {demands.map(demand => {
-          demandCount++;
           return (
-            <div className='mt-8' key={demandCount}>
+            <div className='mt-8' key={demand.demand_number}>
               <h2 style={{
                 color: 'white',
                 fontFamily: 'Cubano-Regular',
@@ -50,9 +63,9 @@ export default function IndexPage() {
                 WebkitTextStrokeWidth: '1px',
                 WebkitTextStrokeColor: '#6930C3',
                 textAlign: 'center'
-              }} className="text-5xl mt-10">{demandCount}</h2>
+              }} className="text-5xl mt-10">{demand.demand_number}</h2>
               <div className='mx-12 lg:flex lg:mx-48 mt-12'>
-                <p className='lg:text-xl'>{demand}</p>
+                <p className='lg:text-xl'>{demand.demandtext}</p>
                 <img src='/images/adrianna-van-groningen-NvD9zZ7nn8Q-unsplash.jpg' className="w-2/3 mx-auto mt-8 lg:ml-8 lg:w-2/6 lg:h-64 object-contain lg:mt-0" />
               </div>
             </div>
