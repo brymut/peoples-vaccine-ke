@@ -5,7 +5,6 @@ import { useForm } from "react-hook-form";
 import { useState } from 'react';
 
 
-
 export default function ContactPage() {
     const { register, handleSubmit, watch, errors } = useForm();
     const [submitted, setSubmitted] = useState(false)
@@ -13,23 +12,17 @@ export default function ContactPage() {
         url: "https://peoples-vaccine-ke-directus-sbw4jzw6ja-uc.a.run.app",
         project: "peoples-vaccine",
     })
-    // client.getItems("contactformresponses")
-    //     .then(data => {
-    //         console.log(data)
-    //     })
-    //     .catch(error => console.error(error));
 
     const onSubmit = formData => {
-        console.log(formData)
         client.createItem("contactformresponses", {
             name: formData.name,
             contact: formData.contact,
             message: formData.message
-        }).then(data => {
-            console.log(data)
-            setSubmitted(true)
-        }).catch(error => console.log(error))
+        })
+            .then(setSubmitted(true))
+            .catch(error => console.log(error))
     }
+
     return (
         <>
             <Head>
@@ -57,13 +50,13 @@ export default function ContactPage() {
                     <>
                         <p className="text-center mt-10">You can also contact us directly via the following form and we'll get back to you.</p>
                         <form onSubmit={handleSubmit(onSubmit)} className='border-black border-4 mx-16 lg:mx-48 my-5 flex flex-col min'>
-                            <label for="name">Name</label>
+                            <label htmlFor="name">Name</label>
                             <input type='text' name="name" id="name" ref={register({ required: true })}></input>
                             {errors.name && <span className='text-red-600'>required</span>}
-                            <label for="contact">How can we reach you?</label>
+                            <label htmlFor="contact">How can we reach you?</label>
                             <input type='text' name="contact" id="contact" ref={register({ required: true })}></input>
                             {errors.contact && <span className='text-red-600'>required</span>}
-                            <label for="message">What would you like to tell/ask us?</label>
+                            <label htmlFor="message">What would you like to tell/ask us?</label>
                             <textarea name="message" id="message" ref={register({ required: true })}></textarea>
                             {errors.message && <span className='text-red-600'>required</span>}
                             <button type='submit' className='border-black border-2 mx-5 my-5 '>Send message</button>

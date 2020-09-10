@@ -3,7 +3,6 @@ import { useRouter } from 'next/router'
 
 export default function Nav() {
   const router = useRouter()
-  console.log(router.pathname)
   return (
     <nav className="lg:mx-32 my-8">
       <h1 style={{
