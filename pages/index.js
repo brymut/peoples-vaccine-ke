@@ -52,7 +52,8 @@ export default function IndexPage({ demands }) {
             WebkitTextFillColor: 'white',
             WebkitTextStrokeWidth: '2px',
             WebkitTextStrokeColor: '#993333',
-            textTransform: 'capitalize'
+            textTransform: 'capitalize',
+            textAlign: 'center'
           }} className="text-5xl mt-12">OUR DEMANDS</h1>
         </div>
         {demands.map(demand => {

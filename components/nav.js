@@ -8,7 +8,11 @@ export default function Nav() {
   return (
     <>
       <nav className="lg:mx-32 my-2" >
-        <img src='/images/logo-transparent.webp' width='140px' height='140px' className="mx-auto lg:hidden" />
+        <picture>
+          <source type="image/webp" srcset="/images/logo-transparent.webp" />
+          <img src='/images/logo-transparent.png' width='140px' height='140px' alt='Peoples vaccine ke main logo' className="mx-auto lg:hidden" />
+        </picture>
+
         <ul className='flex justify-around lg:hidden mt-4'>
           {
             router.pathname === '/contact' ? null :
@@ -61,7 +65,10 @@ export default function Nav() {
             }
           </li>
           <li>
-            <img src='/images/logo-transparent.webp' width='175px' height='175px' />
+            <picture>
+              <source type="image/webp" srcset="/images/logo-transparent.webp" />
+              <img src='/images/logo-transparent.png' width='175px' height='175px' alt='Peoples vaccine ke main logo' />
+            </picture>
             {
               router.pathname === '/' ? null :
                 <Link href="/">
