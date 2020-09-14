@@ -64,8 +64,17 @@ export default function ContactPage({ contacts }) {
                     WebkitTextStrokeWidth: '1.5px',
                     WebkitTextStrokeColor: '#993333',
                     // textAlign: 'center'
-                }} className="text-4xl">Contact us via:</h3>
-                <ul className="flex flex-col lg:flex-row justify-around mx-6 lg:mx-40 mt-5">
+                }} className=" hidden lg:block text-4xl">Contact us via:</h3>
+                <h3 style={{
+                    color: 'white',
+                    fontFamily: 'Montserrat',
+                    fontWeight: '900',
+                    WebkitTextFillColor: 'white',
+                    WebkitTextStrokeWidth: '1.0px',
+                    WebkitTextStrokeColor: '#993333',
+                    // textAlign: 'center'
+                }} className=" text-xl lg:hidden">Contact us via:</h3>
+                <ul style={{ color: '#993333' }} className="flex flex-col lg:flex-row justify-around mx-6 lg:mx-40 mt-5">
                     {contacts.map(contactMethod => {
                         if (contactMethod.contact_method === 'Email') {
                             return <li className='my-2 lg:my-0' key={contactMethod.id}><FontAwesomeIcon icon={faEnvelope} /><a className='ml-5' href={`mailto:${contactMethod.link}`}>{contactMethod.contact_method}</a></li>
