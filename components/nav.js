@@ -7,13 +7,13 @@ export default function Nav() {
   const router = useRouter()
   return (
     <>
-      <nav className="lg:mx-32 my-2" >
+      <nav className="lg:mx-32" >
         <picture>
           <source type="image/webp" srcset="/images/logo-transparent.webp" />
-          <img src='/images/logo-transparent.png' width='140px' height='140px' alt='Peoples vaccine ke main logo' className="mx-auto lg:hidden" />
+          <img src='/images/logo-transparent.png' width='200px' height='200px' alt='Peoples vaccine ke main logo' className="mx-auto lg:hidden" />
         </picture>
 
-        <ul className='flex justify-around lg:hidden mt-4'>
+        <ul className='flex justify-around lg:hidden'>
           {
             router.pathname === '/contact' ? null :
               <li>
@@ -67,7 +67,7 @@ export default function Nav() {
           <li>
             <picture>
               <source type="image/webp" srcset="/images/logo-transparent.webp" />
-              <img src='/images/logo-transparent.png' width='175px' height='175px' alt='Peoples vaccine ke main logo' />
+              <img src='/images/logo-transparent.png' width='275px' height='275px' alt='Peoples vaccine ke main logo' />
             </picture>
             {
               router.pathname === '/' ? null :
