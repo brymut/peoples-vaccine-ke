@@ -8,7 +8,7 @@ export default function Nav() {
   return (
     <>
       <nav className="lg:mx-32 my-2" >
-        <img src='/images/logo-transparent.webp' width='140px' height='140px' className="mx-auto" />
+        <img src='/images/logo-transparent.webp' width='140px' height='140px' className="mx-auto lg:hidden" />
         <ul className='flex justify-around lg:hidden mt-4'>
           {
             router.pathname === '/contact' ? null :
