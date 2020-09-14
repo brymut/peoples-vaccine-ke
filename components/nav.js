@@ -9,7 +9,7 @@ export default function Nav() {
     <>
       <nav className="lg:mx-32" >
         <picture>
-          <source type="image/webp" srcset="/images/logo-transparent.webp" />
+          <source type="image/webp" srcSet="/images/logo-transparent.webp" />
           <img src='/images/logo-transparent.png' width='200px' height='200px' alt='Peoples vaccine ke main logo' className="mx-auto lg:hidden" />
         </picture>
 
@@ -66,7 +66,7 @@ export default function Nav() {
           </li>
           <li>
             <picture>
-              <source type="image/webp" srcset="/images/logo-transparent.webp" />
+              <source type="image/webp" srcSet="/images/logo-transparent.webp" />
               <img src='/images/logo-transparent.png' width='275px' height='275px' alt='Peoples vaccine ke main logo' />
             </picture>
             {
@@ -77,16 +77,18 @@ export default function Nav() {
             }
 
           </li>
-          <ul className="flex justify-between items-center w-24 space-x-1 ">
-            {
-              router.pathname === '/resources' ? null :
-                <li>
-                  <Link href="/resources">
-                    <a style={{ color: '#993333', fontFamily: 'Montserrat', fontWeight: '600' }} className="no-underline hidden lg:block">Resources</a>
-                  </Link>
-                </li>
-            }
-          </ul>
+          <li>
+            <ul className="flex justify-between items-center w-24 space-x-1 ">
+              {
+                router.pathname === '/resources' ? null :
+                  <li>
+                    <Link href="/resources">
+                      <a style={{ color: '#993333', fontFamily: 'Montserrat', fontWeight: '600' }} className="no-underline hidden lg:block">Resources</a>
+                    </Link>
+                  </li>
+              }
+            </ul>
+          </li>
         </ul>
       </nav >
     </>

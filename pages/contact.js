@@ -1,11 +1,37 @@
 import Nav from '../components/nav'
-import Head from 'next/head'
-import DirectusSDK from "@directus/sdk-js";
 import { useForm } from "react-hook-form";
 import { useState } from 'react';
 
+import DirectusSDK from "@directus/sdk-js";
+import Head from 'next/head'
 
-export default function ContactPage() {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
+import { faInstagram, faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons'
+
+export async function getStaticProps() {
+    const contacts = []
+    const client = new DirectusSDK({
+        url: "https://api.peoplesvaccine.co.ke",
+        project: "peoples-vaccine",
+    })
+
+    await client.getItems('contactlinks')
+        .then(data => {
+            data.data.map(contactMethod => {
+                contacts.push(contactMethod)
+            })
+        })
+        .catch(error => console.log(error))
+    return {
+        props: {
+            contacts
+        },
+        revalidate: 1,
+    }
+}
+
+export default function ContactPage({ contacts }) {
     const { register, handleSubmit, watch, errors } = useForm();
     const [submitted, setSubmitted] = useState(false)
     const client = new DirectusSDK({
@@ -39,11 +65,24 @@ export default function ContactPage() {
                     WebkitTextStrokeColor: '#993333',
                     // textAlign: 'center'
                 }} className="text-4xl">Contact us via:</h3>
-                <ul className="flex flex-col lg:flex-row justify-around mx-32 lg:mx-40 mt-10">
-                    <li>Twitter</li>
-                    <li>Instagram</li>
-                    <li>Facebook</li>
-                    <li>Email</li>
+                <ul className="flex flex-col lg:flex-row justify-around mx-6 lg:mx-40 mt-5">
+                    {contacts.map(contactMethod => {
+                        if (contactMethod.contact_method === 'Email') {
+                            return <li className='my-2 lg:my-0' key={contactMethod.id}><FontAwesomeIcon icon={faEnvelope} /><a className='ml-5' href={`mailto:${contactMethod.link}`}>{contactMethod.contact_method}</a></li>
+                        } else {
+                            switch (contactMethod.contact_method) {
+                                case 'Facebook':
+                                    return <li className='my-2 lg:my-0' key={contactMethod.id}><FontAwesomeIcon icon={faFacebook} /><a className='ml-5' href={contactMethod.link}>{contactMethod.contact_method}</a></li>
+                                case 'Instagram':
+                                    return <li className='my-2 lg:my-0' key={contactMethod.id}><FontAwesomeIcon icon={faInstagram} /><a className='ml-5' href={contactMethod.link}>{contactMethod.contact_method}</a></li>
+                                case 'Twitter':
+                                    return <li className='my-2 lg:my-0' key={contactMethod.id}><FontAwesomeIcon icon={faTwitter} /><a className='ml-5' href={contactMethod.link}>{contactMethod.contact_method}</a></li>
+                                default:
+                                    return <li className='my-2 lg:my-0' key={contactMethod.id}><a href={contactMethod.link}>{contactMethod.contact_method}</a></li>
+                            }
+                        }
+                    })
+                    }
                 </ul>
             </section>
             <section id='contact-form'>
