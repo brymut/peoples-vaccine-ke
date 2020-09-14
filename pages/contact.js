@@ -32,10 +32,11 @@ export default function ContactPage() {
             <section id='contact-us-socials' className="mx-24 mt-10">
                 <h3 style={{
                     color: 'white',
-                    fontFamily: 'Cubano-Regular',
+                    fontFamily: 'Montserrat',
+                    fontWeight: '900',
                     WebkitTextFillColor: 'white',
-                    WebkitTextStrokeWidth: '1px',
-                    WebkitTextStrokeColor: '#6930C3',
+                    WebkitTextStrokeWidth: '1.5px',
+                    WebkitTextStrokeColor: '#993333',
                     // textAlign: 'center'
                 }} className="text-4xl">Contact us via:</h3>
                 <ul className="flex flex-col lg:flex-row justify-around mx-32 lg:mx-40 mt-10">

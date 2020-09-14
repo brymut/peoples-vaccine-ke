@@ -13,7 +13,7 @@ export default function Nav() {
           <img src='/images/logo-transparent.png' width='200px' height='200px' alt='Peoples vaccine ke main logo' className="mx-auto lg:hidden" />
         </picture>
 
-        <ul className='flex justify-around lg:hidden'>
+        <ul className='h-24 flex flex-col justify-between text-center underline lg:hidden'>
           {
             router.pathname === '/contact' ? null :
               <li>
@@ -72,7 +72,7 @@ export default function Nav() {
             {
               router.pathname === '/' ? null :
                 <Link href="/">
-                  <a style={{ color: '#993333', fontFamily: 'Montserrat', fontWeight: '600' }} className="no-underline mt-5 text-center hidden lg:block">Read our Demands</a>
+                  <a style={{ color: '#993333', fontFamily: 'Montserrat', fontWeight: '600' }} className="no-underline text-center hidden lg:block">Read our Demands</a>
                 </Link>
             }
 

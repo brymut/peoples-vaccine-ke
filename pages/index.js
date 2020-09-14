@@ -31,7 +31,7 @@ export default function IndexPage({ demands }) {
         <title>#PeoplesVaccine - Demands</title>
       </Head>
       <Nav />
-      <div className="mt-8 lg:mt-16 lg:mx-32 lg:flex lg:items-center">
+      <div className="mt-8 lg:mt-4 lg:mx-32 lg:flex lg:items-center">
         <>
           <p className="text-center mx-12 lg:w-2/6 lg:ml-32"> The #PeoplesVaccineKE is a nationwide campaign to push for the free distribution and unconditional access for the COVID-19 vaccine.
         <br /><br />
