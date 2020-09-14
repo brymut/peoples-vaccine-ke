@@ -16,6 +16,7 @@ class MyDocument extends Document {
                     <link rel="canonical" href="https://peoplesvaccine.co.ke" />
                     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
                     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+                    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
                     {/* Global Site Tag (gtag.js) - Google Analytics */}
                     <script
                         async
@@ -34,7 +35,7 @@ class MyDocument extends Document {
                         }}
                     />
                 </Head>
-                <body className="antialiased" style={{ backgroundColor: '#A7E0F1', fontFamily: 'PT Sans Narrow' }}>
+                <body className="antialiased" style={{ backgroundColor: '#a0d6dc', fontFamily: 'Montserrat' }}>
                     <Main />
                     <NextScript />
                 </body>

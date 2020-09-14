@@ -47,21 +47,24 @@ export default function IndexPage({ demands }) {
         <div>
           <h1 style={{
             color: 'white',
-            fontFamily: 'Cubano-Regular',
+            fontFamily: 'Montserrat',
+            fontWeight: '900',
             WebkitTextFillColor: 'white',
             WebkitTextStrokeWidth: '2px',
-            WebkitTextStrokeColor: '#6930C3'
-          }} className="text-5xl mt-12">Our demands</h1>
+            WebkitTextStrokeColor: '#993333',
+            textTransform: 'capitalize'
+          }} className="text-5xl mt-12">OUR DEMANDS</h1>
         </div>
         {demands.map(demand => {
           return (
             <div className='mt-8' key={demand.demand_number}>
               <h2 style={{
                 color: 'white',
-                fontFamily: 'Cubano-Regular',
+                fontFamily: 'Montserrat',
+                fontWeight: '900',
                 WebkitTextFillColor: 'white',
-                WebkitTextStrokeWidth: '1px',
-                WebkitTextStrokeColor: '#6930C3',
+                WebkitTextStrokeWidth: '2px',
+                WebkitTextStrokeColor: '#993333',
                 textAlign: 'center'
               }} className="text-5xl mt-10">{demand.demand_number}</h2>
               <div className='mx-12 lg:flex lg:mx-48 mt-12'>

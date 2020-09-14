@@ -7,29 +7,14 @@ export default function Nav() {
   const router = useRouter()
   return (
     <>
-      <nav className="lg:mx-32 my-8">
-        <h1 style={{
-          color: 'white',
-          fontFamily: 'Cubano-Regular',
-          WebkitTextFillColor: 'white',
-          WebkitTextStrokeWidth: '1px',
-          WebkitTextStrokeColor: '#6930C3',
-          textAlign: 'center'
-        }} className="text-3xl md:text-4xl lg:hidden">#PeoplesVaccineKE</h1>
-        <h2 style={{
-          color: 'white',
-          fontFamily: 'Cubano-Regular',
-          WebkitTextFillColor: 'white',
-          WebkitTextStrokeWidth: '0.5px',
-          WebkitTextStrokeColor: '#6930C3',
-          textAlign: 'center'
-        }} className="lg:hidden text-sm">No one is safe until we are all safe</h2>
+      <nav className="lg:mx-32 my-2" >
+        <img src='/images/logo-transparent.webp' width='140px' height='140px' className="mx-auto" />
         <ul className='flex justify-around lg:hidden mt-4'>
           {
             router.pathname === '/contact' ? null :
               <li>
                 <Link href="/contact">
-                  <a style={{ color: '#7400B8', fontFamily: 'Pt Sans' }} className="no-underline">Contact</a>
+                  <a style={{ color: '#993333', fontFamily: 'Montserrat', fontWeight: '500' }} className="no-underline">Contact</a>
                 </Link>
               </li>
           }
@@ -37,7 +22,7 @@ export default function Nav() {
             router.pathname === '/shareyourvoice' ? null :
               <li>
                 <Link href="/shareyourvoice">
-                  <a style={{ color: '#7400B8', fontFamily: 'Pt Sans' }} className="no-underline">Share your voice</a>
+                  <a style={{ color: '#993333', fontFamily: 'Montserrat', fontWeight: '500' }} className="no-underline">Share your voice</a>
                 </Link>
               </li>
           }
@@ -45,7 +30,7 @@ export default function Nav() {
             router.pathname === '/' ? null :
               <li>
                 <Link href="/">
-                  <a style={{ color: '#7400B8', fontFamily: 'Pt Sans' }} className="no-underline">Read our Demands</a>
+                  <a style={{ color: '#993333', fontFamily: 'Montserrat', fontWeight: '500' }} className="no-underline">Read our Demands</a>
                 </Link>
               </li>
           }
@@ -53,17 +38,17 @@ export default function Nav() {
             router.pathname === '/resources' ? null :
               <li>
                 <Link href="/resources" >
-                  <a style={{ color: '#7400B8', fontFamily: 'Pt Sans' }} className="no-underline lg:hidden">Resources</a>
+                  <a style={{ color: '#993333', fontFamily: 'Montserrat', fontWeight: '500' }} className="no-underline lg:hidden">Resources</a>
                 </Link>
               </li>
           }
         </ul>
         <ul className="hidden lg:flex lg:justify-between lg:items-center">
-          <li>
+          <li className=' w-40'>
             {
               router.pathname === '/contact' ? null : <>
                 <Link href="/contact">
-                  <a style={{ color: '#7400B8', fontFamily: 'Pt Sans' }} className="no-underline">Contact</a>
+                  <a style={{ color: '#993333', fontFamily: 'Montserrat', fontWeight: '600' }} className="no-underline">Contact</a>
                 </Link>
                 <br></br>
                 <br></br>
@@ -71,40 +56,28 @@ export default function Nav() {
             }
             {
               router.pathname === '/shareyourvoice' ? null : <Link href="/shareyourvoice">
-                <a style={{ color: '#7400B8', fontFamily: 'Pt Sans' }} className="no-underline">Share your voice</a>
+                <a style={{ color: '#993333', fontFamily: 'Montserrat', fontWeight: '600' }} className="no-underline">Share your voice</a>
               </Link>
             }
           </li>
           <li>
-            <h1 style={{
-              color: 'white',
-              fontFamily: 'Cubano-Regular',
-              WebkitTextFillColor: 'white',
-              WebkitTextStrokeWidth: '2px',
-              WebkitTextStrokeColor: '#6930C3'
-            }} className="hidden lg:block text-5xl">#PeoplesVaccineKE</h1>
-            <h2 style={{
-              color: 'white',
-              fontFamily: 'Cubano-Regular',
-              WebkitTextFillColor: 'white',
-              WebkitTextStrokeWidth: '1px',
-              WebkitTextStrokeColor: '#6930C3',
-              textAlign: 'center'
-            }} className="hidden lg:block text-xl">No one is safe until we are all safe</h2>
+            <img src='/images/logo-transparent.webp' width='175px' height='175px' />
             {
               router.pathname === '/' ? null :
                 <Link href="/">
-                  <a style={{ color: '#7400B8', fontFamily: 'Pt Sans' }} className="no-underline mt-5 text-center hidden lg:block">Read our Demands</a>
+                  <a style={{ color: '#993333', fontFamily: 'Montserrat', fontWeight: '600' }} className="no-underline mt-5 text-center hidden lg:block">Read our Demands</a>
                 </Link>
             }
 
           </li>
-          <ul className="flex justify-between items-center space-x-4">
+          <ul className="flex justify-between items-center w-24 space-x-1 ">
             {
               router.pathname === '/resources' ? null :
-                <Link href="/resources">
-                  <a style={{ color: '#7400B8', fontFamily: 'Pt Sans' }} className="no-underline hidden lg:block">Resources</a>
-                </Link>
+                <li>
+                  <Link href="/resources">
+                    <a style={{ color: '#993333', fontFamily: 'Montserrat', fontWeight: '600' }} className="no-underline hidden lg:block">Resources</a>
+                  </Link>
+                </li>
             }
           </ul>
         </ul>
