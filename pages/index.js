@@ -38,7 +38,7 @@ export default function IndexPage({ demands }) {
         We believe that the COVID-19 vaccine should be treated as a nationwide public good and access should be in the interests of all Kenyans, not just those who can afford it.
         </p>
         </>
-        <img src='/images/adrianna-van-groningen-NvD9zZ7nn8Q-unsplash.jpg' className=" w-4/6 mx-auto mt-4 lg:w-2/6 lg:mr-48" />
+        <img src='/images/adrianna-van-groningen-NvD9zZ7nn8Q-unsplash.jpg' alt='homepage peoplesvaccine image' className=" w-4/6 mx-auto mt-4 lg:w-2/6 lg:mr-48" />
       </div>
       <p className="text-center mx-12 mt-4 lg:mx-56 lg:mt-12">The end goal of this campaign is to ensure free flow and accessibility of the COVID-19 vaccine. These demands are set to create a community-oriented mechanism to ensure each one of us is able to access the vaccine at no cost or conditions.
       <br /><br />
@@ -66,7 +66,7 @@ export default function IndexPage({ demands }) {
               }} className="text-5xl mt-10">{demand.demand_number}</h2>
               <div className='mx-12 lg:flex lg:mx-48 mt-12'>
                 <p className='lg:text-xl'>{demand.demandtext}</p>
-                <img src='/images/adrianna-van-groningen-NvD9zZ7nn8Q-unsplash.jpg' className="w-2/3 mx-auto mt-8 lg:ml-8 lg:w-2/6 lg:h-64 object-contain lg:mt-0" />
+                <img src='/images/adrianna-van-groningen-NvD9zZ7nn8Q-unsplash.jpg' alt={`demand-${demand.demand_number}-image`} className="w-2/3 mx-auto mt-8 lg:ml-8 lg:w-2/6 lg:h-64 object-contain lg:mt-0" />
               </div>
             </div>
           )
