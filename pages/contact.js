@@ -96,15 +96,15 @@ export default function ContactPage({ contacts }) {
                 {submitted ? <p className="text-center mt-10">Thank you for reaching out, we'll get back to you as soon as we can.</p> :
                     <>
                         <p className="text-center mt-10">You can also contact us directly via the following form and we'll get back to you.</p>
-                        <form onSubmit={handleSubmit(onSubmit)} className='border-black border-4 mx-16 lg:mx-48 my-5 flex flex-col min'>
-                            <label htmlFor="name">Name</label>
-                            <input type='text' name="name" id="name" ref={register({ required: true })}></input>
+                        <form onSubmit={handleSubmit(onSubmit)} className='mx-4 lg:mx-48 my-5 flex flex-col p-3 lg:p-6'>
+                            <label style={{ color: '#993333' }} className='mt-4' htmlFor="name">What is your name?</label>
+                            <input style={{ border: 2, borderColor: '#993333', borderStyle: 'solid' }} type='text' name="name" id="name" ref={register({ required: true })}></input>
                             {errors.name && <span className='text-red-600'>required</span>}
-                            <label htmlFor="contact">How can we reach you?</label>
-                            <input type='text' name="contact" id="contact" ref={register({ required: true })}></input>
+                            <label style={{ color: '#993333' }} className='mt-4' htmlFor="contact">How can we reach you?</label>
+                            <input style={{ border: 2, borderColor: '#993333', borderStyle: 'solid' }} type='text' name="contact" id="contact" ref={register({ required: true })}></input>
                             {errors.contact && <span className='text-red-600'>required</span>}
-                            <label htmlFor="message">What would you like to tell/ask us?</label>
-                            <textarea name="message" id="message" ref={register({ required: true })}></textarea>
+                            <label style={{ color: '#993333' }} className='mt-4' htmlFor="message">What would you like to tell/ask us?</label>
+                            <textarea style={{ border: 2, borderColor: '#993333', borderStyle: 'solid' }} name="message" id="message" ref={register({ required: true })} rows='5'></textarea>
                             {errors.message && <span className='text-red-600'>required</span>}
                             <button type='submit' className='border-black border-2 mx-5 my-5 '>Send message</button>
                         </form>

@@ -8,10 +8,15 @@ export default function Nav() {
   return (
     <>
       <nav className="lg:mx-32" >
-        <picture>
-          <source type="image/webp" srcSet="/images/logo-transparent.webp" />
-          <img src='/images/logo-transparent.png' width='200px' height='200px' alt='Peoples vaccine ke main logo' className="mx-auto lg:hidden" />
-        </picture>
+        <Link href="/">
+          <a>
+            <picture>
+              <source type="image/webp" srcSet="/images/logo-transparent.webp" />
+              <img src='/images/logo-transparent.png' width='200px' height='200px' alt='Peoples vaccine ke main logo' className="mx-auto lg:hidden" />
+            </picture>
+          </a>
+        </Link>
+
 
         <ul className='h-24 flex flex-col justify-between text-center underline lg:hidden'>
           {
@@ -65,10 +70,14 @@ export default function Nav() {
             }
           </li>
           <li>
-            <picture>
-              <source type="image/webp" srcSet="/images/logo-transparent.webp" />
-              <img src='/images/logo-transparent.png' width='275px' height='275px' alt='Peoples vaccine ke main logo' />
-            </picture>
+            <Link href="/">
+              <a>
+                <picture>
+                  <source type="image/webp" srcSet="/images/logo-transparent.webp" />
+                  <img src='/images/logo-transparent.png' width='275px' height='275px' alt='Peoples vaccine ke main logo' />
+                </picture>
+              </a>
+            </Link>
             {
               router.pathname === '/' ? null :
                 <Link href="/">

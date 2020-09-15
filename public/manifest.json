@@ -1,0 +1,21 @@
+{
+    "name": "#PeoplesVaccineKE",
+    "short_name": "peoplesvaccineke",
+    "display": "standalone",
+    "orientation": "portrait",
+    "theme_color": "#993333",
+    "background_color": "#A0D6DC",
+    "start_url": "/",
+    "icons": [
+      {
+        "src": "/icons/android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/icons/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
