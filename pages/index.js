@@ -4,8 +4,9 @@ import DirectusSDK from "@directus/sdk-js";
 
 export async function getStaticProps() {
   const demands = []
+  let teamDescription = ''
   const client = new DirectusSDK({
-    url: "https://peoples-vaccine-ke-directus-sbw4jzw6ja-uc.a.run.app",
+    url: "https://api.peoplesvaccine.co.ke/",
     project: "peoples-vaccine",
   })
 
@@ -16,15 +17,24 @@ export async function getStaticProps() {
       })
     })
     .catch(error => console.log(error))
+
+  await client.getItems('theteam')
+    .then(data => {
+      data.data.map(team => {
+        teamDescription = team.team_text
+      })
+    })
+    .catch(error => console.log(error))
   return {
     props: {
-      demands
+      demands,
+      teamDescription
     },
     revalidate: 1,
   }
 }
 
-export default function IndexPage({ demands }) {
+export default function IndexPage({ demands, teamDescription }) {
   return (
     <>
       <Head>
@@ -87,7 +97,7 @@ export default function IndexPage({ demands }) {
           textTransform: 'capitalize',
           textAlign: 'center'
         }} className="text-4xl mt-12">THE TEAM</h3>
-        <p className='text-center mx-12 lg:mx-40 my-5'>This campaign has been made possible by the voluntary efforts and solidarity of organizers, activists, researchers, lawyers, healthcare workers and all WaKenya who hope for a vaccine that is free and accessible to all and a precedent for free and accessible #MedicareForAl</p>
+        <p className='text-center mx-12 lg:mx-40 my-5'>{teamDescription}</p>
       </section>
     </>
   )

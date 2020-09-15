@@ -63,7 +63,6 @@ export default function ContactPage({ contacts }) {
                     WebkitTextFillColor: 'white',
                     WebkitTextStrokeWidth: '1.5px',
                     WebkitTextStrokeColor: '#993333',
-                    // textAlign: 'center'
                 }} className=" hidden lg:block text-4xl">Contact us via:</h3>
                 <h3 style={{
                     color: 'white',
@@ -72,7 +71,6 @@ export default function ContactPage({ contacts }) {
                     WebkitTextFillColor: 'white',
                     WebkitTextStrokeWidth: '1.0px',
                     WebkitTextStrokeColor: '#993333',
-                    // textAlign: 'center'
                 }} className=" text-xl lg:hidden">Contact us via:</h3>
                 <ul style={{ color: '#993333' }} className="flex flex-col lg:flex-row justify-around mx-6 lg:mx-40 mt-5">
                     {contacts.map(contactMethod => {
