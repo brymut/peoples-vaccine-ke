@@ -57,7 +57,7 @@ export default function ContactPage({ contacts }) {
             <Nav />
             <section id='contact-us-socials' className="mx-24 mt-10">
                 <h3 style={{
-                    color: 'white',
+                    color: '#993333',
                     fontFamily: 'Montserrat',
                     fontWeight: '900',
                     WebkitTextFillColor: 'white',
@@ -65,7 +65,7 @@ export default function ContactPage({ contacts }) {
                     WebkitTextStrokeColor: '#993333',
                 }} className=" hidden lg:block text-4xl">Contact us via:</h3>
                 <h3 style={{
-                    color: 'white',
+                    color: '#993333',
                     fontFamily: 'Montserrat',
                     fontWeight: '900',
                     WebkitTextFillColor: 'white',

@@ -56,7 +56,7 @@ export default function IndexPage({ demands, teamDescription }) {
       <section id='demands' className="flex flex-col items-center mt-8">
         <div>
           <h2 style={{
-            color: 'white',
+            color: '#993333',
             fontFamily: 'Montserrat',
             fontWeight: '900',
             WebkitTextFillColor: 'white',
@@ -70,7 +70,7 @@ export default function IndexPage({ demands, teamDescription }) {
           return (
             <div className='mt-8' key={demand.demand_number}>
               <h3 style={{
-                color: 'white',
+                color: '#993333',
                 fontFamily: 'Montserrat',
                 fontWeight: '900',
                 WebkitTextFillColor: 'white',
@@ -88,7 +88,7 @@ export default function IndexPage({ demands, teamDescription }) {
       </section>
       <section id='the team'>
         <h3 style={{
-          color: 'white',
+          color: '#993333',
           fontFamily: 'Montserrat',
           fontWeight: '900',
           WebkitTextFillColor: 'white',

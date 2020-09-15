@@ -9,12 +9,12 @@ export default function Nav() {
     <>
       <nav className="lg:mx-32" >
         <Link href="/">
-          <a>
-            <picture>
-              <source type="image/webp" srcSet="/images/logo-transparent.webp" />
+          <picture>
+            <source type="image/webp" srcSet="/images/logo-transparent.webp" />
+            <a href="#" aria-label="Peoples vaccine Kenya logo">
               <img src='/images/logo-transparent.png' width='200px' height='200px' alt='Peoples vaccine ke main logo' className="mx-auto lg:hidden" />
-            </picture>
-          </a>
+            </a>
+          </picture>
         </Link>
 
 
@@ -71,12 +71,12 @@ export default function Nav() {
           </li>
           <li>
             <Link href="/">
-              <a>
-                <picture>
-                  <source type="image/webp" srcSet="/images/logo-transparent.webp" />
+              <picture>
+                <source type="image/webp" srcSet="/images/logo-transparent.webp" />
+                <a href="#" aria-label="Peoples vaccine Kenya logo">
                   <img src='/images/logo-transparent.png' width='275px' height='275px' alt='Peoples vaccine ke main logo' />
-                </picture>
-              </a>
+                </a>
+              </picture>
             </Link>
             {
               router.pathname === '/' ? null :
