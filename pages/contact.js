@@ -31,7 +31,7 @@ export async function getStaticProps() {
     }
 }
 
-export default function ContactPage({ contacts }) {
+export default function ContactPage({ contacts, optOut, setOptOut, dismissPrivacyBanner, setDismissPrivacyBanner }) {
     const { register, handleSubmit, watch, errors } = useForm();
     const [submitted, setSubmitted] = useState(false)
     const client = new DirectusSDK({
@@ -54,7 +54,7 @@ export default function ContactPage({ contacts }) {
             <Head>
                 <title>#PeoplesVaccine - Contact</title>
             </Head>
-            <Nav />
+            <Nav optOut={optOut} setOptOut={setOptOut} dismissPrivacyBanner={dismissPrivacyBanner} setDismissPrivacyBanner={setDismissPrivacyBanner} />
             <section id='contact-us-socials' className="mx-24 mt-10">
                 <h3 style={{
                     color: '#993333',

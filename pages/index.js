@@ -34,13 +34,13 @@ export async function getStaticProps() {
   }
 }
 
-export default function IndexPage({ demands, teamDescription }) {
+export default function IndexPage({ demands, teamDescription, optOut, setOptOut, dismissPrivacyBanner, setDismissPrivacyBanner }) {
   return (
     <>
       <Head>
         <title>#PeoplesVaccine - Demands</title>
       </Head>
-      <Nav />
+      <Nav optOut={optOut} setOptOut={setOptOut} dismissPrivacyBanner={dismissPrivacyBanner} setDismissPrivacyBanner={setDismissPrivacyBanner} />
       <div className="mt-8 lg:mt-4 lg:mx-32 lg:flex lg:items-center">
         <>
           <p className="text-center mx-12 lg:w-2/6 lg:ml-32"> The #PeoplesVaccineKE is a nationwide campaign to push for the free distribution and unconditional access for the COVID-19 vaccine.
@@ -78,7 +78,7 @@ export default function IndexPage({ demands, teamDescription }) {
                 WebkitTextStrokeColor: '#993333',
                 textAlign: 'center'
               }} className="text-5xl mt-10">{demand.demand_number}</h3>
-              <div className='mx-12 lg:flex lg:mx-48 mt-12'>
+              <div className='mx-10 lg:flex lg:mx-48 mt-5'>
                 <p className='lg:text-xl'>{demand.demandtext}</p>
                 <img src='/images/adrianna-van-groningen-NvD9zZ7nn8Q-unsplash.png' alt={`demand-${demand.demand_number}-image`} className="w-2/3 mx-auto mt-8 lg:ml-8 lg:w-2/6 lg:h-64 object-contain lg:mt-0" />
               </div>
@@ -97,7 +97,7 @@ export default function IndexPage({ demands, teamDescription }) {
           textTransform: 'capitalize',
           textAlign: 'center'
         }} className="text-4xl mt-12">THE TEAM</h3>
-        <p className='text-center mx-12 lg:mx-40 my-5'>{teamDescription}</p>
+        <p className='text-center mx-12 lg:mx-40 mt-5 mb-20'>{teamDescription}</p>
       </section>
     </>
   )

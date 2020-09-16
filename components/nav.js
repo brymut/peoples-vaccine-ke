@@ -1,12 +1,12 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-// import PrivacyPolicyBanner from './privacyPolicyBanner'
+import PrivacyPolicyBanner from './privacyPolicyBanner'
 
-
-export default function Nav() {
+export default function Nav({ optOut, setOptOut, dismissPrivacyBanner, setDismissPrivacyBanner }) {
   const router = useRouter()
   return (
     <>
+      <PrivacyPolicyBanner optOut={optOut} setOptOut={setOptOut} dismissPrivacyBanner={dismissPrivacyBanner} setDismissPrivacyBanner={setDismissPrivacyBanner} />
       <nav className="lg:mx-32" >
         <Link href="/">
           <picture>
@@ -16,8 +16,6 @@ export default function Nav() {
             </a>
           </picture>
         </Link>
-
-
         <ul className='h-24 flex flex-col justify-between text-center underline lg:hidden'>
           {
             router.pathname === '/contact' ? null :
