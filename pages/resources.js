@@ -6,9 +6,15 @@ export default function ResourcesPage({ optOut, setOptOut, dismissPrivacyBanner,
     return (
         <>
             <Head>
-                <title>#PeoplesVaccine - Resources</title>
+                <title>#PeoplesVaccineKE - Resources</title>
                 <meta name="twitter:title" content=">#PeoplesVaccineKE - Resources" />
                 <meta name="twitter:description" content="Resources you can use to learn more." />
+                <meta property="og:title" content="#PeoplesVaccineKE - Resources" />
+                <meta property="og:description" content="Resources you can use to learn more." />
+                <meta name="twitter:url" content="https://peoplesvaccine.co.ke/resources" />
+                <meta property="og:url" content="https://peoplesvaccine.co.ke/resources" />
+                <meta property="og:type" content="website" />
+
 
             </Head>
             <Nav optOut={optOut} setOptOut={setOptOut} dismissPrivacyBanner={dismissPrivacyBanner} setDismissPrivacyBanner={setDismissPrivacyBanner} />

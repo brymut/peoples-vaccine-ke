@@ -52,9 +52,14 @@ export default function ContactPage({ contacts, optOut, setOptOut, dismissPrivac
     return (
         <>
             <Head>
-                <title>#PeoplesVaccine - Contact</title>
-                <meta name="twitter:title" content=">#PeoplesVaccineKE - Contact" />
+                <title>#PeoplesVaccineKE - Contact</title>
+                <meta name="twitter:title" content="#PeoplesVaccineKE - Contact" />
                 <meta name="twitter:description" content="Reach out to #PeoplesVaccineKE" />
+                <meta property="og:title" content="#PeoplesVaccineKE - Contact" />
+                <meta property="og:description" content="Reach out to #PeoplesVaccineKE" />
+                <meta name="twitter:url" content="https://peoplesvaccine.co.ke/contact" />
+                <meta property="og:url" content="https://peoplesvaccine.co.ke/contact" />
+                <meta property="og:type" content="website" />
             </Head>
             <Nav optOut={optOut} setOptOut={setOptOut} dismissPrivacyBanner={dismissPrivacyBanner} setDismissPrivacyBanner={setDismissPrivacyBanner} />
             <section id='contact-us-socials' className="mx-24 mt-10">
