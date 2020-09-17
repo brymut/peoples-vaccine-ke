@@ -5,17 +5,4 @@ module.exports = withPWA({
         dest: 'public',
         disable: true
     },
-    async headers() {
-        return [
-            {
-                source: '/contact',
-                headers: [
-                    {
-                        key: 'Set-Cookie',
-                        value: 'SameSite=None;Secure',
-                    },
-                ],
-            },
-        ]
-    },
 })
