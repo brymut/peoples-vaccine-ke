@@ -1,4 +1,6 @@
-# PeoplesVaccineKE website
+# #PeoplesVaccineKE website
+
+![People Vaccine KE logo](https://https://peoplesvaccine.co.ke/images/logo-transparent.png)
 
 This is the website for the #PeoplesVaccineKE campaign.
 
