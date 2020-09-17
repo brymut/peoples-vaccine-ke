@@ -53,6 +53,15 @@ export default function ContactPage({ contacts, optOut, setOptOut, dismissPrivac
         <>
             <Head>
                 <title>#PeoplesVaccine - Contact</title>
+                < script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            function onSubmit(token) {
+                                document.getElementById("demo-form").submit();
+                              }
+                            `,
+                    }}
+                />
             </Head>
             <Nav optOut={optOut} setOptOut={setOptOut} dismissPrivacyBanner={dismissPrivacyBanner} setDismissPrivacyBanner={setDismissPrivacyBanner} />
             <section id='contact-us-socials' className="mx-24 mt-10">
@@ -96,7 +105,7 @@ export default function ContactPage({ contacts, optOut, setOptOut, dismissPrivac
                 {submitted ? <p className="text-center mt-10">Thank you for reaching out, we'll get back to you as soon as we can.</p> :
                     <>
                         <p className="text-center mt-10">You can also contact us directly via the following form and we'll get back to you.</p>
-                        <form onSubmit={handleSubmit(onSubmit)} className='mx-4 lg:mx-48 my-5 flex flex-col p-3 lg:p-6'>
+                        <form id="contact-form" onSubmit={handleSubmit(onSubmit)} className='mx-4 lg:mx-48 my-5 flex flex-col p-3 lg:p-6'>
                             <label style={{ color: '#993333' }} className='mt-4' htmlFor="name">What is your name?</label>
                             <input style={{ border: 2, borderColor: '#993333', borderStyle: 'solid' }} type='text' name="name" id="name" ref={register({ required: true })}></input>
                             {errors.name && <span className='text-red-600'>required</span>}
@@ -106,7 +115,7 @@ export default function ContactPage({ contacts, optOut, setOptOut, dismissPrivac
                             <label style={{ color: '#993333' }} className='mt-4' htmlFor="message">What would you like to tell/ask us?</label>
                             <textarea style={{ border: 2, borderColor: '#993333', borderStyle: 'solid' }} name="message" id="message" ref={register({ required: true })} rows='5'></textarea>
                             {errors.message && <span className='text-red-600'>required</span>}
-                            <button type='submit' className='border-black border-2 mx-5 my-5 '>Send message</button>
+                            <button type='submit' className='border-black border-2 mx-5 my-5 g-recaptcha' data-sitekey="6Le8T80ZAAAAAKldfbiAXUcKWIswVLaNW7ZQ3CdY" data-callback='onSubmit' data-action='submit'>Submit</button>
                         </form>
                     </>
                 }
