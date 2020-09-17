@@ -39,6 +39,8 @@ export default function IndexPage({ demands, teamDescription, optOut, setOptOut,
     <>
       <Head>
         <title>#PeoplesVaccine - Demands</title>
+        <meta name="twitter:title" content=">#PeoplesVaccineKE - Demands" />
+        <meta name="twitter:description" content="The #PeoplesVaccineKE is a nationwide campaign to push for the free distribution and unconditional access for the COVID-19 vaccine." />
       </Head>
       <Nav optOut={optOut} setOptOut={setOptOut} dismissPrivacyBanner={dismissPrivacyBanner} setDismissPrivacyBanner={setDismissPrivacyBanner} />
       <div className="mt-8 lg:mt-4 lg:mx-32 lg:flex lg:items-center">

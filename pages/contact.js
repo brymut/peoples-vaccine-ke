@@ -53,15 +53,8 @@ export default function ContactPage({ contacts, optOut, setOptOut, dismissPrivac
         <>
             <Head>
                 <title>#PeoplesVaccine - Contact</title>
-                < script
-                    dangerouslySetInnerHTML={{
-                        __html: `
-                            function onSubmit(token) {
-                                document.getElementById("demo-form").submit();
-                              }
-                            `,
-                    }}
-                />
+                <meta name="twitter:title" content=">#PeoplesVaccineKE - Contact" />
+                <meta name="twitter:description" content="Reach out to #PeoplesVaccineKE" />
             </Head>
             <Nav optOut={optOut} setOptOut={setOptOut} dismissPrivacyBanner={dismissPrivacyBanner} setDismissPrivacyBanner={setDismissPrivacyBanner} />
             <section id='contact-us-socials' className="mx-24 mt-10">
