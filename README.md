@@ -1,6 +1,6 @@
 # #PeoplesVaccineKE website
 
-<img src="https://peoplesvaccine.co.ke/images/logo-transparent.png" alt="People Vaccine KE logo" width="50"/>
+<img src="https://peoplesvaccine.co.ke/images/logo-transparent.png" alt="People Vaccine KE logo" width="250"/>
 
 This is the website for the #PeoplesVaccineKE campaign.
 
