@@ -22,10 +22,10 @@ class MyDocument extends Document {
                     <meta name="description" content={APP_DESCRIPTION} />
                     <meta name='format-detection' content='telephone=no' />
                     <meta name='mobile-web-app-capable' content='yes' />
+                    <meta name="robots" content="index, follow" />
                     <meta name='theme-color' content='#993333' />
                     <meta name="twitter:card" content="summary" />
                     <meta name="twitter:site" content="@vaccineKe" />
-                    <meta name="twitter:url" content="https://peoplesvaccine.co.ke" />
                     <meta property="og:image" content="https://peoplesvaccine.co.ke/images/logo-banner.png" />
                     <link rel="canonical" href="https://peoplesvaccine.co.ke" />
                     <link rel='apple-touch-icon' sizes='180x180' href='/icons/apple-touch-icon.png' />
