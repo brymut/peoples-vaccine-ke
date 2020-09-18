@@ -32,7 +32,7 @@ export async function getStaticProps() {
 }
 
 export default function ContactPage({ contacts, optOut, setOptOut, dismissPrivacyBanner, setDismissPrivacyBanner }) {
-    const { register, handleSubmit, watch, errors } = useForm();
+    const { register, handleSubmit, errors } = useForm();
     const [submitted, setSubmitted] = useState(false)
     const client = new DirectusSDK({
         url: "https://peoples-vaccine-ke-directus-sbw4jzw6ja-uc.a.run.app",
@@ -40,9 +40,11 @@ export default function ContactPage({ contacts, optOut, setOptOut, dismissPrivac
     })
 
     const onSubmit = formData => {
+        console.log(formData)
         client.createItem("contactformresponses", {
             name: formData.name,
             contact: formData.contact,
+            location: formData.location,
             message: formData.message
         })
             .then(setSubmitted(true))
@@ -110,6 +112,9 @@ export default function ContactPage({ contacts, optOut, setOptOut, dismissPrivac
                             <label style={{ color: '#993333' }} className='mt-4' htmlFor="contact">How can we reach you?</label>
                             <input style={{ border: 2, borderColor: '#993333', borderStyle: 'solid' }} type='text' name="contact" id="contact" ref={register({ required: true })}></input>
                             {errors.contact && <span className='text-red-600'>required</span>}
+                            <label style={{ color: '#993333' }} className='mt-4' htmlFor="location">County of residence</label>
+                            <input style={{ border: 2, borderColor: '#993333', borderStyle: 'solid' }} type='text' name="location" id="location" ref={register({ required: true })}></input>
+                            {errors.location && <span className='text-red-600'>required</span>}
                             <label style={{ color: '#993333' }} className='mt-4' htmlFor="message">What would you like to tell/ask us?</label>
                             <textarea style={{ border: 2, borderColor: '#993333', borderStyle: 'solid' }} name="message" id="message" ref={register({ required: true })} rows='5'></textarea>
                             {errors.message && <span className='text-red-600'>required</span>}
