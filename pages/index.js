@@ -66,10 +66,6 @@ export default function IndexPage({ demands, teamDescription, optOut, setOptOut,
             color: '#993333',
             fontFamily: 'Montserrat',
             fontWeight: '900',
-            WebkitTextFillColor: 'white',
-            WebkitTextStrokeWidth: '2px',
-            WebkitTextStrokeColor: '#993333',
-            textTransform: 'capitalize',
             textAlign: 'center'
           }} className="text-5xl mt-12">OUR DEMANDS</h2>
         </div>
@@ -80,9 +76,6 @@ export default function IndexPage({ demands, teamDescription, optOut, setOptOut,
                 color: '#993333',
                 fontFamily: 'Montserrat',
                 fontWeight: '900',
-                WebkitTextFillColor: 'white',
-                WebkitTextStrokeWidth: '2px',
-                WebkitTextStrokeColor: '#993333',
                 textAlign: 'center'
               }} className="text-5xl mt-10">{demand.demand_number}</h3>
               <div className='mx-10 lg:flex lg:mx-48 mt-5'>
@@ -98,13 +91,9 @@ export default function IndexPage({ demands, teamDescription, optOut, setOptOut,
           color: '#993333',
           fontFamily: 'Montserrat',
           fontWeight: '900',
-          WebkitTextFillColor: 'white',
-          WebkitTextStrokeWidth: '1px',
-          WebkitTextStrokeColor: '#993333',
-          textTransform: 'capitalize',
           textAlign: 'center'
         }} className="text-4xl mt-12">THE TEAM</h3>
-        <p className='text-center mx-12 lg:mx-40 mt-5 mb-20'>{teamDescription}</p>
+        <p className='text-center mx-12 lg:mx-40 mt-5 mb-32'>{teamDescription}</p>
       </section>
     </>
   )

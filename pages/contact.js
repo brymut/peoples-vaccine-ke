@@ -69,17 +69,11 @@ export default function ContactPage({ contacts, optOut, setOptOut, dismissPrivac
                     color: '#993333',
                     fontFamily: 'Montserrat',
                     fontWeight: '900',
-                    WebkitTextFillColor: 'white',
-                    WebkitTextStrokeWidth: '1.5px',
-                    WebkitTextStrokeColor: '#993333',
                 }} className=" hidden lg:block text-4xl">Contact us via:</h3>
                 <h3 style={{
                     color: '#993333',
                     fontFamily: 'Montserrat',
                     fontWeight: '900',
-                    WebkitTextFillColor: 'white',
-                    WebkitTextStrokeWidth: '1.0px',
-                    WebkitTextStrokeColor: '#993333',
                 }} className=" text-xl lg:hidden">Contact us via:</h3>
                 <ul style={{ color: '#993333' }} className="flex flex-col lg:flex-row justify-around mx-6 lg:mx-40 mt-5">
                     {contacts.map(contactMethod => {
@@ -105,20 +99,20 @@ export default function ContactPage({ contacts, optOut, setOptOut, dismissPrivac
                 {submitted ? <p className="text-center mt-10">Thank you for reaching out, we'll get back to you as soon as we can.</p> :
                     <>
                         <p className="text-center mt-10">You can also contact us directly via the following form and we'll get back to you.</p>
-                        <form id="contact-form" onSubmit={handleSubmit(onSubmit)} className='mx-4 lg:mx-48 my-5 flex flex-col p-3 lg:p-6'>
+                        <form id="contact-form" onSubmit={handleSubmit(onSubmit)} className='mx-4 lg:mx-48 mt-5 mb-32 flex flex-col p-3 lg:p-6'>
                             <label style={{ color: '#993333' }} className='mt-4' htmlFor="name">What is your name?</label>
-                            <input style={{ border: 2, borderColor: '#993333', borderStyle: 'solid' }} type='text' name="name" id="name" ref={register({ required: true })}></input>
+                            <input type='text' name="name" id="name" ref={register({ required: true })}></input>
                             {errors.name && <span className='text-red-600'>required</span>}
                             <label style={{ color: '#993333' }} className='mt-4' htmlFor="contact">How can we reach you?</label>
-                            <input style={{ border: 2, borderColor: '#993333', borderStyle: 'solid' }} type='text' name="contact" id="contact" ref={register({ required: true })}></input>
+                            <input type='text' name="contact" id="contact" ref={register({ required: true })}></input>
                             {errors.contact && <span className='text-red-600'>required</span>}
                             <label style={{ color: '#993333' }} className='mt-4' htmlFor="location">County of residence</label>
-                            <input style={{ border: 2, borderColor: '#993333', borderStyle: 'solid' }} type='text' name="location" id="location" ref={register({ required: true })}></input>
+                            <input type='text' name="location" id="location" ref={register({ required: true })}></input>
                             {errors.location && <span className='text-red-600'>required</span>}
                             <label style={{ color: '#993333' }} className='mt-4' htmlFor="message">What would you like to tell/ask us?</label>
-                            <textarea style={{ border: 2, borderColor: '#993333', borderStyle: 'solid' }} name="message" id="message" ref={register({ required: true })} rows='5'></textarea>
+                            <textarea name="message" id="message" ref={register({ required: true })} rows='5'></textarea>
                             {errors.message && <span className='text-red-600'>required</span>}
-                            <button type='submit' className='border-black border-2 mx-5 my-5'>Send your message</button>
+                            <button style={{ border: 2, borderColor: '#993333', borderStyle: 'solid' }} type='submit' className='w-3/4 mx-auto my-5 '>Send your message</button>
                         </form>
                     </>
                 }
