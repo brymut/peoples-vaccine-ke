@@ -10,6 +10,65 @@
 
 }
 
+.privacy-policy h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.privacy-policy h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.privacy-policy h3 {
+  font-size: 1.25rem;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.privacy-policy p {
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
+}
+
+.privacy-policy a {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+
+.privacy-policy a:link {
+  color: #993333;
+}
+
+.privacy-policy ul {
+  padding-left: 2rem;
+  list-style-type: disc;
+}
+
+.privacy-policy ul li {
+  padding-top: 10px;
+  padding-left: 2rem;
+}
+
+.privacy-policy table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid #993333;
+}
+
+.privacy-policy td,
+.privacy-policy th {
+  border: 3px solid #993333;
+  padding: 3px;
+}
+
 /* Start purging... */
 @tailwind components;
 /* Stop purging. */
