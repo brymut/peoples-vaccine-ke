@@ -68,6 +68,13 @@ export default function IndexPage({ demands, teamDescription, optOut, setOptOut,
             fontWeight: '900',
             textAlign: 'center'
           }} className="text-5xl mt-12">OUR DEMANDS</h2>
+          <h3 style={{
+            color: '#993333',
+            fontFamily: 'Montserrat',
+            fontWeight: '700',
+            textAlign: 'center'
+          }} className="text-2xl mt-5 text-center">Immediate measures for the execution of a sustainable People’s Vaccine in Kenya</h3>
+          <p className="text-xl mt-10 text-center">We the people of Kenya demand that once the COVID-19 vaccine is found:</p>
         </div>
         {demands.map(demand => {
           return (
@@ -77,10 +84,9 @@ export default function IndexPage({ demands, teamDescription, optOut, setOptOut,
                 fontFamily: 'Montserrat',
                 fontWeight: '900',
                 textAlign: 'center'
-              }} className="text-5xl mt-10">{demand.demand_number}</h3>
+              }} className="text-xl mt-10">{demand.demand_subtitle}</h3>
               <div className='mx-10 lg:flex lg:mx-48 mt-5'>
                 <p className='lg:text-xl'>{demand.demandtext}</p>
-                <img src='/images/adrianna-van-groningen-NvD9zZ7nn8Q-unsplash.png' alt={`demand-${demand.demand_number}-image`} className="w-2/3 mx-auto mt-8 lg:ml-8 lg:w-2/6 lg:h-64 object-contain lg:mt-0" />
               </div>
             </div>
           )
