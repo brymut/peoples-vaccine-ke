@@ -12,7 +12,6 @@ export async function getStaticProps() {
         .then(data => {
             data.data.map(privacyPolicy => {
                 privacyPolicyHtml = privacyPolicy.privacy_policy_text
-                console.log(privacyPolicyHtml)
             })
         })
         .catch(error => console.log(error))
