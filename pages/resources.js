@@ -7,7 +7,7 @@ export default function ResourcesPage({ optOut, setOptOut, dismissPrivacyBanner,
         <>
             <Head>
                 <title>#PeoplesVaccineKE - Resources</title>
-                <meta name="twitter:title" content=">#PeoplesVaccineKE - Resources" />
+                <meta name="twitter:title" content="#PeoplesVaccineKE - Resources" />
                 <meta name="twitter:description" content="Resources you can use to learn more." />
                 <meta property="og:title" content="#PeoplesVaccineKE - Resources" />
                 <meta property="og:description" content="Resources you can use to learn more." />
