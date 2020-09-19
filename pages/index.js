@@ -84,7 +84,7 @@ export default function IndexPage({ demands, teamDescription, optOut, setOptOut,
                 fontFamily: 'Montserrat',
                 fontWeight: '900',
                 textAlign: 'center'
-              }} className="text-xl mt-10">{demand.demand_subtitle}</h3>
+              }} className="text-xl mt-10 mx-3 lg:mx-32">{demand.demand_subtitle}</h3>
               <div className='mx-10 lg:flex lg:mx-48 mt-5'>
                 <p className='lg:text-xl'>{demand.demandtext}</p>
               </div>
