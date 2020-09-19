@@ -50,14 +50,14 @@ export default function IndexPage({ demands, teamDescription, optOut, setOptOut,
       <Nav optOut={optOut} setOptOut={setOptOut} dismissPrivacyBanner={dismissPrivacyBanner} setDismissPrivacyBanner={setDismissPrivacyBanner} />
       <div className="mt-8 lg:mt-4 lg:mx-32 lg:flex lg:items-center">
         <>
-          <p className="text-center mx-12 lg:w-2/6 lg:ml-32"> The #PeoplesVaccineKE is a nationwide campaign to push for the free distribution and unconditional access for the COVID-19 vaccine.
+          <p className="text-center mx-8 lg:w-2/6 lg:ml-32"> The #PeoplesVaccineKE is a worldwide campaign to push for the free distribution and unconditional access for the COVID-19 vaccine.
         <br /><br />
-        We believe that the COVID-19 vaccine should be treated as a nationwide public good and access should be in the interests of all Kenyans, not just those who can afford it.
+        We believe that the COVID-19 vaccine should be treated as a nationwide public good and access should be in the interests of all people everywhere, not just those who can afford it.
         </p>
         </>
         <img src='/images/adrianna-van-groningen-NvD9zZ7nn8Q-unsplash.png' alt='homepage peoplesvaccine image' className=" w-4/6 mx-auto mt-4 lg:w-2/6 lg:mr-48" />
       </div>
-      <p className="text-center mx-12 mt-4 lg:mx-56 lg:mt-12">The end goal of this campaign is to ensure free flow and accessibility of the COVID-19 vaccine. These demands are set to create a community-oriented mechanism to ensure each one of us is able to access the vaccine at no cost or conditions.
+      <p className="text-center mx-8 mt-4 lg:mx-56 lg:mt-12">The end goal of this campaign is to ensure free flow and accessibility of the COVID-19 vaccine. These demands are set to create a community-oriented mechanism to ensure each one of us is able to access the vaccine at no cost or conditions everywhere in the world and learning from campaigners of the peoplesvaccine all over the world, we forcefully and urgently must implement these measures in Kenya.
       <br /><br />
       We aim to strengthen all our communities and to ensure that this vaccine is not just for the political class, elite and those who can afford, it SHOULD be for EVERYONE.</p>
       <section id='demands' className="flex flex-col items-center mt-8">
