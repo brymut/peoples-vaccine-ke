@@ -35,6 +35,9 @@ export async function getStaticProps() {
 }
 
 export default function IndexPage({ demands, teamDescription, optOut, setOptOut, dismissPrivacyBanner, setDismissPrivacyBanner }) {
+  const logoAttributionMarkup = { __html: '<p xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#" class="license-text"><a rel="cc:attributionURL" property="dct:title" href="peoplesvaccine.co.ke/">The PeoplesVaccineKE logo and posters</a> by <span property="cc:attributionName">coconutsakura</span> is licensed under <a style="display:flex;"rel="license" href="https://creativecommons.org/licenses/by-nc/4.0">CC BY-NC 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" /><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" /><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" /></a></p>' }
+  const pictureAttributionMarkup = { __html: '<p xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#" class="license-text"><a rel="cc:attributionURL" property="dct:title" href="peoplesvaccine.co.ke/">Mathare photos for #PeoplesVaccineKE </a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="peoplesvaccine.co.ke">The #PeoplesVaccineKE campaign</a> is licensed under <a style="display:flex;" rel="license" href="https://creativecommons.org/licenses/by-nc/4.0">CC BY-NC 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" /><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" /><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" /></a></p>' }
+
   return (
     <>
       <Head>
@@ -48,14 +51,15 @@ export default function IndexPage({ demands, teamDescription, optOut, setOptOut,
         <meta property="og:type" content="website" />
       </Head>
       <Nav optOut={optOut} setOptOut={setOptOut} dismissPrivacyBanner={dismissPrivacyBanner} setDismissPrivacyBanner={setDismissPrivacyBanner} />
-      <div className="mt-8 lg:mt-4 lg:mx-32 lg:flex lg:items-center">
+      <div className="mt-10 lg:mt-6 lg:mx-32 lg:flex lg:items-center">
         <>
           <p className="text-center mx-8 lg:w-2/6 lg:ml-32"> The #PeoplesVaccineKE is a worldwide campaign to push for the free distribution and unconditional access for the COVID-19 vaccine.
         <br /><br />
         We believe that the COVID-19 vaccine should be treated as a nationwide public good and access should be in the interests of all people everywhere, not just those who can afford it.
         </p>
         </>
-        <img src='/images/adrianna-van-groningen-NvD9zZ7nn8Q-unsplash.png' alt='homepage peoplesvaccine image' className=" w-4/6 mx-auto mt-4 lg:w-2/6 lg:mr-48" />
+        <img src='/images/homepage.jpeg' alt='homepage peoplesvaccine image' className=" w-9/12 lg:w-4/12 mx-auto my-5 lg:my-0 lg:ml-20 " />
+
       </div>
       <p className="text-center mx-8 mt-4 lg:mx-56 lg:mt-12">The end goal of this campaign is to ensure free flow and accessibility of the COVID-19 vaccine. These demands are set to create a community-oriented mechanism to ensure each one of us is able to access the vaccine at no cost or conditions everywhere in the world and learning from campaigners of the peoplesvaccine all over the world, we forcefully and urgently must implement these measures in Kenya.
       <br /><br />
@@ -106,7 +110,11 @@ export default function IndexPage({ demands, teamDescription, optOut, setOptOut,
           fontWeight: '900',
           textAlign: 'center'
         }} className="text-4xl mt-12">THE TEAM</h3>
-        <p className='text-center mx-12 lg:mx-40 mt-5 mb-32'>{teamDescription}</p>
+        <p className='text-center mx-12 lg:mx-40 mt-5 mb-10'>{teamDescription}</p>
+      </section>
+      <section id='attribution' className='mb-32' >
+        <div className='flex justify-center my-4 mx-3' dangerouslySetInnerHTML={logoAttributionMarkup} />
+        <div className='flex justify-center my-6 mx-3' dangerouslySetInnerHTML={pictureAttributionMarkup} />
       </section>
     </>
   )

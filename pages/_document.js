@@ -52,7 +52,7 @@ class MyDocument extends Document {
                             `,
                         }}
                     />
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8" />
+                    <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8" />
                     < script
                         dangerouslySetInnerHTML={{
                             __html: `

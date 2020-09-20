@@ -19,7 +19,7 @@ export default function Nav({ optOut, setOptOut, dismissPrivacyBanner, setDismis
         <ul className='h-24 flex flex-col justify-between text-center underline lg:hidden'>
           {
             router.pathname === '/contact' ? null :
-              <li>
+              <li className='pt-1'>
                 <Link href="/contact">
                   <a style={{ color: '#993333', fontFamily: 'Montserrat', fontWeight: '500' }} className="no-underline">Contact</a>
                 </Link>
@@ -27,7 +27,7 @@ export default function Nav({ optOut, setOptOut, dismissPrivacyBanner, setDismis
           }
           {
             router.pathname === '/shareyourvoice' ? null :
-              <li>
+              <li className='pt-1'>
                 <Link href="/shareyourvoice">
                   <a style={{ color: '#993333', fontFamily: 'Montserrat', fontWeight: '500' }} className="no-underline">Share your voice</a>
                 </Link>
@@ -35,7 +35,7 @@ export default function Nav({ optOut, setOptOut, dismissPrivacyBanner, setDismis
           }
           {
             router.pathname === '/' ? null :
-              <li>
+              <li className='pt-1'>
                 <Link href="/">
                   <a style={{ color: '#993333', fontFamily: 'Montserrat', fontWeight: '500' }} className="no-underline">Read our Demands</a>
                 </Link>
@@ -43,7 +43,7 @@ export default function Nav({ optOut, setOptOut, dismissPrivacyBanner, setDismis
           }
           {
             router.pathname === '/resources' ? null :
-              <li>
+              <li className='pt-1'>
                 <Link href="/resources" >
                   <a style={{ color: '#993333', fontFamily: 'Montserrat', fontWeight: '500' }} className="no-underline lg:hidden">Resources</a>
                 </Link>
