@@ -105,6 +105,8 @@ export default function SwahiliPage({ demands, teamDescription, optOut, setOptOu
                         </div>
                     )
                 })}
+                <img src='/images/immediate-measures-summary-swahili.jpg' alt='picha iliyoandikiwa hatua za haraka za utekelezaji wa Chanjo endelevu' className='object-center w-5/6 lg:w-1/2 mt-20'></img>
+
             </section>
             <section id='the team'>
                 <h3 style={{
