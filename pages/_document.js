@@ -25,7 +25,7 @@ class MyDocument extends Document {
                     <meta name='mobile-web-app-capable' content='yes' />
                     <meta name="robots" content="index, follow" />
                     <meta name='theme-color' content='#993333' />
-                    <meta name="twitter:card" content="summary" />
+                    <meta name="twitter:card" content="summary_large_image" />
                     <meta name="twitter:site" content="@vaccineKe" />
                     <meta property="twitter:image" content="https://peoplesvaccine.co.ke/images/logo-banner.png"></meta>
                     <meta property="og:image" content="https://peoplesvaccine.co.ke/images/logo-banner.png" />
