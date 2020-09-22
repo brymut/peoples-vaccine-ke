@@ -2,7 +2,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { GA_TRACKING_ID } from '../lib/gtag'
 
 const APP_NAME = '#PeoplesVaccineKE'
-const APP_DESCRIPTION = `The #PeoplesVaccineKE is a nationwide campaign to push for the free distribution and unconditional access for the COVID-19 vaccine.`
+// const APP_DESCRIPTION = `The #PeoplesVaccineKE is a nationwide campaign to push for the free distribution and unconditional access for the COVID-19 vaccine.`
 
 
 class MyDocument extends Document {
@@ -17,7 +17,6 @@ class MyDocument extends Document {
                 <Head>
                     <meta charSet="utf-8" />
                     <meta name='application-name' content={APP_NAME} />
-                    <meta name="Description" content={APP_DESCRIPTION} />
                     <meta name='apple-mobile-web-app-capable' content='yes' />
                     <meta name='apple-mobile-web-app-status-bar-style' content='default' />
                     <meta name='apple-mobile-web-app-title' content={APP_NAME} />

@@ -29,6 +29,8 @@ export default function PrivacyPolicyPage({ privacyPolicyHtml, optOut, setOptOut
         <>
             <Head>
                 <title>#PeoplesVaccineKE - Privacy</title>
+                <meta name="title" content="#PeoplesVaccineKE - Privacy" />
+                <meta name="description" content="The #PeoplesVaccineKE privacy policy statement." />
                 <meta name="twitter:title" content="#PeoplesVaccineKE - Privacy" />
                 <meta name="twitter:description" content="The #PeoplesVaccineKE privacy policy statement." />
                 <meta property="og:title" content="#PeoplesVaccineKE - Privacy" />

@@ -10,6 +10,8 @@ export default function ShareYourVoicePage({ optOut, setOptOut, dismissPrivacyBa
         <>
             <Head>
                 <title>#PeoplesVaccineKE - Share your voice</title>
+                <meta name="title" content="#PeoplesVaccineKE - Share your voice" />
+                <meta name="description" content="Share your voice for #PeoplesVaccineKE" />
                 <meta name="twitter:title" content="#PeoplesVaccineKE - Share your voice" />
                 <meta name="twitter:description" content="Share your voice for #PeoplesVaccineKE" />
                 <meta property="og:title" content="#PeoplesVaccineKE - Share your voice" />

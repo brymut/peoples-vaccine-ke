@@ -34,10 +34,12 @@ export default function ResourcesPage({ resources, optOut, setOptOut, dismissPri
         <>
             <Head>
                 <title>#PeoplesVaccineKE - Resources</title>
+                <meta name="title" content="#PeoplesVaccineKE - Resources" />
+                <meta name="description" content="Resources you can use to learn more about the #PeoplesVaccineKE campaign." />
                 <meta name="twitter:title" content="#PeoplesVaccineKE - Resources" />
-                <meta name="twitter:description" content="Resources you can use to learn more." />
+                <meta name="twitter:description" content="Resources you can use to learn more about the #PeoplesVaccineKE campaign." />
                 <meta property="og:title" content="#PeoplesVaccineKE - Resources" />
-                <meta property="og:description" content="Resources you can use to learn more." />
+                <meta property="og:description" content="Resources you can use to learn more about the #PeoplesVaccineKE campaign." />
                 <meta name="twitter:url" content="https://peoplesvaccine.co.ke/resources" />
                 <meta property="og:url" content="https://peoplesvaccine.co.ke/resources" />
                 <meta property="og:type" content="website" />

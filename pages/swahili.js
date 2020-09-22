@@ -45,6 +45,8 @@ export default function SwahiliPage({ demands, teamDescription, optOut, setOptOu
         <>
             <Head>
                 <title>#PeoplesVaccineKE - Matakwa</title>
+                <meta name="title" content="#PeoplesVaccineKE - Matakwa" />
+                <meta name="description" content="#PeoplesVaccineKE ni kampeni ya ulimwenguni pote kushinikiza usambazaji wa bure na ufikiaji bila masharti kwa chanjo ya COVID-19." />
                 <meta name="twitter:title" content="#PeoplesVaccineKE - Matakwa" />
                 <meta name="twitter:description" content="#PeoplesVaccineKE ni kampeni ya ulimwenguni pote kushinikiza usambazaji wa bure na ufikiaji bila masharti kwa chanjo ya COVID-19." />
                 <meta property="og:title" content="#PeoplesVaccineKE - Matakwa" />

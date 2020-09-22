@@ -42,6 +42,8 @@ export default function IndexPage({ demands, teamDescription, optOut, setOptOut,
     <>
       <Head>
         <title>#PeoplesVaccineKE - Demands</title>
+        <meta name="title" content="#PeoplesVaccineKE - Demands" />
+        <meta name="description" content="The #PeoplesVaccineKE is a nationwide campaign to push for the free distribution and unconditional access for the COVID-19 vaccine." />
         <meta name="twitter:title" content="#PeoplesVaccineKE - Demands" />
         <meta name="twitter:description" content="The #PeoplesVaccineKE is a nationwide campaign to push for the free distribution and unconditional access for the COVID-19 vaccine." />
         <meta property="og:title" content="#PeoplesVaccineKE - Demands" />
