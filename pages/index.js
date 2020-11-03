@@ -55,15 +55,17 @@ export default function IndexPage({ demands, teamDescription, optOut, setOptOut,
       <Nav optOut={optOut} setOptOut={setOptOut} dismissPrivacyBanner={dismissPrivacyBanner} setDismissPrivacyBanner={setDismissPrivacyBanner} />
       <div className="mt-10 lg:mt-6 lg:mx-32 lg:flex lg:items-center">
         <>
-          <p className="text-center mx-8 lg:w-2/6 lg:ml-32"> The #PeoplesVaccineKE is a worldwide campaign to push for the free distribution and unconditional access for the COVID-19 vaccine.
-        <br /><br />
-        We believe that the COVID-19 vaccine should be treated as a nationwide public good and access should be in the interests of all people everywhere, not just those who can afford it.
+          <p className="text-center mx-8 lg:w-2/6 lg:ml-32"> The #PeoplesVaccine is a global campaign to push for the free distribution and unconditional access for the COVID-19 vaccine, we collectively believe that the COVID-19 vaccine should be treated as a nationwide public good and access should be in the interests of all people everywhere, not just those who can afford it.
         </p>
         </>
         <img src='/images/homepage.jpg' alt='homepage peoplesvaccine image' className=" w-9/12 lg:w-4/12 mx-auto my-5 lg:my-0 lg:ml-20 " />
 
       </div>
-      <p className="text-center mx-8 mt-4 lg:mx-56 lg:mt-12">The end goal of this campaign is to ensure free flow and accessibility of the COVID-19 vaccine. These demands are set to create a community-oriented mechanism to ensure each one of us is able to access the vaccine at no cost or conditions everywhere in the world and learning from campaigners of the peoplesvaccine all over the world, we forcefully and urgently must implement these measures in Kenya.
+      <p className="text-center mx-8 mt-4 lg:mx-56 lg:mt-12">
+        In this regard, we have joined the global call for a #PeoplesVaccine and are working to establish our localized demands under #PeoplesVaccineKE in Kenya.
+        The end goal of this campaign is to ensure the free and unconditional accessibility to the COVID-19 vaccine for all.
+        <br /><br />
+        These demands are set to create a community-oriented mechanism to ensure each one of us is able to access the vaccine at no cost or conditions in Kenya, learning from the #PeoplesVaccine all over the world, we forcefully and urgently must implement these measures in Kenya.
       <br /><br />
       We aim to strengthen all our communities and to ensure that this vaccine is not just for the political class, elite and those who can afford, it SHOULD be for EVERYONE.</p>
       <section id='demands' className="flex flex-col items-center mt-8">
