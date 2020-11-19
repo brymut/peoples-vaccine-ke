@@ -82,12 +82,22 @@ export default function PublicationPage({ publication, optOut, setOptOut, dismis
     }
     return (
         <Layout seo={seo} optOut={optOut} setOptOut={setOptOut} dismissPrivacyBanner={dismissPrivacyBanner} setDismissPrivacyBanner={setDismissPrivacyBanner}>
-            <h1 style={{ color: "#993333", fontSize: "36px", fontFamily: 'Montserrat', fontWeight: '700', fontStyle: 'italic' }} className="text-center mt-10">
-                {publication.title}
-            </h1>
-            <h2 style={{ color: "#993333", fontSize: "18px", fontFamily: 'Montserrat', fontWeight: '600' }} className="text-center mb-10">
-                {publication.author}
-            </h2>
+            <div className="md:hidden">
+                <h1 style={{ color: "#993333", fontSize: "24px", fontFamily: 'Montserrat', fontWeight: '700', fontStyle: 'italic' }} className="text-center mt-10">
+                    {publication.title}
+                </h1>
+                <h2 style={{ color: "#993333", fontSize: "14px", fontFamily: 'Montserrat', fontWeight: '600' }} className="text-center mb-10 mt-5">
+                    {publication.author}
+                </h2>
+            </div>
+            <div className="hidden md:block">
+                <h1 style={{ color: "#993333", fontSize: "36px", fontFamily: 'Montserrat', fontWeight: '700', fontStyle: 'italic' }} className="text-center mt-10">
+                    {publication.title}
+                </h1>
+                <h2 style={{ color: "#993333", fontSize: "18px", fontFamily: 'Montserrat', fontWeight: '600' }} className="text-center mb-10">
+                    {publication.author}
+                </h2>
+            </div>
             <div className="mt-10 lg:mt-4 lg:mx-32 mx-8 mb-32 lg:items-center publication" dangerouslySetInnerHTML={{ __html: publication.text }}></div>
         </Layout >
     )

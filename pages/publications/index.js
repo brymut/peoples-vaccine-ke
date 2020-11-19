@@ -55,13 +55,15 @@ export default function PublicationsPage({ publications, optOut, setOptOut, dism
             <div className="grid grid-cols-1 mx-5 lg:mx-20">
                 {publications.map(publication => {
                     return (
-                        <div className="my-10 ml-6">
-                            <Link key={publication.id} href={`publications/${publication.slug}`}>
+                        <div key={publication.id} className="my-10 ml-6">
+                            <Link  href={`publications/${publication.slug}`}>
                                 <a>
                                     <h3 style={{
                                         color: '#993333',
                                         fontFamily: 'Montserrat',
-                                        fontWeight: '500',
+                                        fontWeight: '600',
+                                        fontStyle: 'italic',
+                                        textDecoration: 'underline'
                                     }} className="text-xl">{publication.title}</h3>
 
 
