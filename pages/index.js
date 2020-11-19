@@ -126,7 +126,14 @@ export default function IndexPage({ demands, teamDescription, optOut, setOptOut,
             </div>
           )
         })}
-        <img src='/images/immediate-measures-summary.jpeg' alt='immediate measures summary image with all demands listed' className='object-center w-5/6 lg:w-1/2 mt-20'></img>
+        <div className="mt-20 mx-10 lg:mx-0">
+        <Image
+            src="/images/immediate-measures-summary.jpeg"
+            alt="immediate measures summary image with all demands listed"
+            width={512}
+            height={256}
+          />
+        </div>
       </section>
       <section id='the team'>
         <h3 style={{

@@ -17,6 +17,9 @@ export default function Navigation() {
             />
           </a>
         </Link>
+        <Link href="/">
+            <a className="text-center mt-5">Read in English</a>
+        </Link>
       </nav>
       <nav style={{ color: "#993333", fontSize: "18px", fontFamily: 'Montserrat', fontWeight: '700', fontStyle: 'italic', textDecoration: 'underline' }} className="hidden md:flex md:mx-32 mt-5 h-40 justify-center" >
 
@@ -36,7 +39,6 @@ export default function Navigation() {
           </Link>
         </div>
       </nav>
-
     </>
   )
   else
@@ -57,13 +59,13 @@ export default function Navigation() {
             <Link href="/shareyourvoice">
               <a>Share your voice</a>
             </Link>
-            <Link href="/contact">
+            <Link href="/swahili">
               <a>Soma kwa kiswahili</a>
             </Link>
-            <Link href="/swahili">
+            <Link href="/resources">
               <a>Resources</a>
             </Link>
-            <Link href="/resources">
+            <Link href="/contact">
               <a>Contact us</a>
             </Link>
           </div>
