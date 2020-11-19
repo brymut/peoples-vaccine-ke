@@ -17,6 +17,23 @@
   margin-bottom: 20px;
 }
 
+.publication h2{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  color: #993333;
+}
+
+.publication h3 {
+  font-size: 18px;
+  text-align: left;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  font-style: italic;
+  color: #993333;
+}
+
 .privacy-policy h2 {
   font-size: 1.5rem;
   text-align: center;

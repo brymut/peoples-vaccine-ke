@@ -1,13 +1,13 @@
-import Nav from '../components/nav'
+import Navigation from '../components/Navigation'
 import { useForm } from "react-hook-form";
 import { useState } from 'react';
 
 import DirectusSDK from "@directus/sdk-js";
-import Head from 'next/head'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faInstagram, faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons'
+import Layout from '../components/Layout';
 
 export async function getStaticProps() {
     const contacts = []
@@ -32,6 +32,30 @@ export async function getStaticProps() {
 }
 
 export default function ContactPage({ contacts, optOut, setOptOut, dismissPrivacyBanner, setDismissPrivacyBanner }) {
+    const seo = {
+        title: "#PeoplesVaccineKE - Contact",
+        description: "Reach out to the #PeoplesVaccineKE campaign",
+        canonical: "https://peoplesvaccine.co.ke/contact",
+        openGraph: {
+            url: 'https://peoplesvaccine.co.ke/contact',
+            title: '#PeoplesVaccineKE - Contact',
+            description: 'Reach out to the #PeoplesVaccineKE campaign',
+            images: [
+                {
+                    url: 'https://peoplesvaccine.co.ke/images/logo-banner.jpg',
+                    width: 800,
+                    height: 292,
+                    alt: 'Og Image Alt',
+                },
+                {
+                    url: 'https://peoplesvaccine.co.ke/images/logo-banner.png',
+                    width: 1244,
+                    height: 454,
+                    alt: 'Og Image Alt Second',
+                }
+            ],
+        }
+    }
     const { register, handleSubmit, errors } = useForm();
     const [submitted, setSubmitted] = useState(false)
     const client = new DirectusSDK({
@@ -40,7 +64,6 @@ export default function ContactPage({ contacts, optOut, setOptOut, dismissPrivac
     })
 
     const onSubmit = formData => {
-        console.log(formData)
         client.createItem("contactformresponses", {
             name: formData.name,
             contact: formData.contact,
@@ -52,30 +75,19 @@ export default function ContactPage({ contacts, optOut, setOptOut, dismissPrivac
     }
 
     return (
-        <>
-            <Head>
-                <title>#PeoplesVaccineKE - Contact</title>
-                <meta name="title" content="#PeoplesVaccineKE - Contact" />
-                <meta name="description" content="Reach out to the #PeoplesVaccineKE campaign" />
-                <meta name="twitter:title" content="#PeoplesVaccineKE - Contact" />
-                <meta name="twitter:description" content="Reach out to the #PeoplesVaccineKE campaign" />
-                <meta property="og:title" content="#PeoplesVaccineKE - Contact" />
-                <meta property="og:description" content="Reach out to the #PeoplesVaccineKE campaign" />
-                <meta name="twitter:url" content="https://peoplesvaccine.co.ke/contact" />
-                <meta property="og:url" content="https://peoplesvaccine.co.ke/contact" />
-                <meta property="og:type" content="website" />
-            </Head>
-            <Nav optOut={optOut} setOptOut={setOptOut} dismissPrivacyBanner={dismissPrivacyBanner} setDismissPrivacyBanner={setDismissPrivacyBanner} />
+        <Layout seo={seo} optOut={optOut} setOptOut={setOptOut} dismissPrivacyBanner={dismissPrivacyBanner} setDismissPrivacyBanner={setDismissPrivacyBanner}>
             <section id='contact-us-socials' className="mx-24 mt-10">
                 <h3 style={{
                     color: '#993333',
                     fontFamily: 'Montserrat',
                     fontWeight: '900',
+                    fontStyle: 'italic'
                 }} className=" hidden lg:block text-4xl">Contact us via:</h3>
                 <h3 style={{
                     color: '#993333',
                     fontFamily: 'Montserrat',
                     fontWeight: '900',
+                    fontStyle: 'italic'
                 }} className=" text-xl lg:hidden">Contact us via:</h3>
                 <ul style={{ color: '#993333' }} className="flex flex-col lg:flex-row justify-around mx-6 lg:mx-40 mt-5">
                     {contacts.map(contactMethod => {
@@ -119,6 +131,6 @@ export default function ContactPage({ contacts, optOut, setOptOut, dismissPrivac
                     </>
                 }
             </section>
-        </>
+        </Layout>
     )
 }
