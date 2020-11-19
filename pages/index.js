@@ -95,15 +95,17 @@ export default function IndexPage({ demands, teamDescription, optOut, setOptOut,
             color: '#993333',
             fontFamily: 'Montserrat',
             fontWeight: '900',
+            fontStyle: 'italic',
             textAlign: 'center'
           }} className="text-5xl mt-12">OUR DEMANDS</h2>
           <h3 style={{
             color: '#993333',
             fontFamily: 'Montserrat',
             fontWeight: '700',
+            fontStyle: 'italic',
             textAlign: 'center'
-          }} className="text-2xl mt-5 text-center">Immediate measures for the execution of a sustainable People’s Vaccine in Kenya</h3>
-          <p className="text-xl mt-10 text-center">We the people of Kenya demand that once the COVID-19 vaccine is found:</p>
+          }} className="mx-5 lg:mx-0 text-2xl mt-5 text-center">Immediate measures for the execution of a sustainable People’s Vaccine in Kenya</h3>
+          <p className="mx-5 lg:mx-0 text-xl mt-10 text-center">We the people of Kenya demand that once the COVID-19 vaccine is found:</p>
         </div>
         {demands.map(demand => {
           return (
@@ -121,7 +123,7 @@ export default function IndexPage({ demands, teamDescription, optOut, setOptOut,
                 textAlign: 'center'
               }} className="text-xl mt-5 mx-3 lg:mx-32">{demand.demand_subtitle}</h3>
               <div className='mx-10 lg:flex lg:mx-48 mt-5'>
-                <p className='lg:text-xl'>{demand.demandtext}</p>
+                <p className='lg:text-xl text-center '>{demand.demandtext}</p>
               </div>
             </div>
           )
@@ -140,7 +142,8 @@ export default function IndexPage({ demands, teamDescription, optOut, setOptOut,
           color: '#993333',
           fontFamily: 'Montserrat',
           fontWeight: '900',
-          textAlign: 'center'
+          textAlign: 'center',
+          fontStyle: 'italic'
         }} className="text-4xl mt-12">THE TEAM</h3>
         <p className='text-center mx-12 lg:mx-40 mt-5 mb-10'>{teamDescription}</p>
       </section>

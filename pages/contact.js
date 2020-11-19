@@ -64,7 +64,6 @@ export default function ContactPage({ contacts, optOut, setOptOut, dismissPrivac
     })
 
     const onSubmit = formData => {
-        console.log(formData)
         client.createItem("contactformresponses", {
             name: formData.name,
             contact: formData.contact,
@@ -82,11 +81,13 @@ export default function ContactPage({ contacts, optOut, setOptOut, dismissPrivac
                     color: '#993333',
                     fontFamily: 'Montserrat',
                     fontWeight: '900',
+                    fontStyle: 'italic'
                 }} className=" hidden lg:block text-4xl">Contact us via:</h3>
                 <h3 style={{
                     color: '#993333',
                     fontFamily: 'Montserrat',
                     fontWeight: '900',
+                    fontStyle: 'italic'
                 }} className=" text-xl lg:hidden">Contact us via:</h3>
                 <ul style={{ color: '#993333' }} className="flex flex-col lg:flex-row justify-around mx-6 lg:mx-40 mt-5">
                     {contacts.map(contactMethod => {
