@@ -67,13 +67,15 @@ export default function ResourcesPage({ resources, optOut, setOptOut, dismissPri
                         )
                     }
                     return (
-                        <div key={resource.resource_id} className="my-10 ml-6">
+                        <div key={resource.resource_id} className="my-4 ml-6">
                             <a href={resource.resource_link}><h3 style={{
                                 color: '#993333',
                                 fontFamily: 'Montserrat',
-                                fontWeight: '500',
+                                fontWeight: '600',
+                                fontStle: 'italic',
+                                textDecoration: 'underline'
                             }} className="text-xl mt-5">{resource.resource_title}</h3></a>
-                            <p>{resource.resource_description}</p>
+                            <p className="mt-5">{resource.resource_description}</p>
                         </div>
                     )
                 })}
