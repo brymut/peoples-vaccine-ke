@@ -15,26 +15,11 @@ class MyDocument extends Document {
         return (
             <Html lang="en">
                 <Head>
-                    <meta charSet="utf-8" />
-                    <meta name='application-name' content={APP_NAME} />
-                    <meta name='apple-mobile-web-app-capable' content='yes' />
-                    <meta name='apple-mobile-web-app-status-bar-style' content='default' />
-                    <meta name='apple-mobile-web-app-title' content={APP_NAME} />
-                    <meta name='format-detection' content='telephone=no' />
-                    <meta name='mobile-web-app-capable' content='yes' />
-                    <meta name="robots" content="index, follow" />
-                    <meta name='theme-color' content='#993333' />
-                    <meta name="twitter:card" content="summary_large_image" />
-                    <meta name="twitter:site" content="@vaccineKe" />
-                    <meta property="twitter:image" content="https://peoplesvaccine.co.ke/images/logo-banner.png"></meta>
-                    <meta property="og:image" content="https://peoplesvaccine.co.ke/images/logo-banner.png" />
-                    <link rel="canonical" href="https://peoplesvaccine.co.ke" />
                     <link rel='apple-touch-icon' sizes='180x180' href='/icons/apple-touch-icon.png' />
                     <link rel='manifest' href='/manifest.json' />
                     <link rel='shortcut icon' href='/icons/favicon.ico' />
-                    <link defer href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
-                    <link defer href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
-                    <link defer href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+                    <link rel="preconnect" href="https://fonts.gstatic.com" />
+                    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"></link>
                     {/* Global Site Tag (gtag.js) - Google Analytics */}
                     <script
                         async

@@ -1,4 +1,4 @@
-import Nav from '../components/nav'
+import Navigation from '../components/Navigation'
 import Head from 'next/head'
 import DirectusSDK from "@directus/sdk-js";
 
@@ -39,7 +39,7 @@ export default function PrivacyPolicyPage({ privacyPolicyHtml, optOut, setOptOut
                 <meta property="og:url" content="https://peoplesvaccine.co.ke/privacy" />
                 <meta property="og:type" content="website" />
             </Head>
-            <Nav optOut={optOut} setOptOut={setOptOut} dismissPrivacyBanner={dismissPrivacyBanner} setDismissPrivacyBanner={setDismissPrivacyBanner} />
+            <Navigation optOut={optOut} setOptOut={setOptOut} dismissPrivacyBanner={dismissPrivacyBanner} setDismissPrivacyBanner={setDismissPrivacyBanner} />
             <div className='mt-12 lg:mt-4 lg:mx-32 mx-8 mb-12 '>
                 {optOut ? <p>You have opted out of Google Analytics cookie tracking</p> : <p>Google Analytics tracking via cookies is currently enabled</p>}
                 <p>This privacy policy takes effect on the 21st of September 2020</p>

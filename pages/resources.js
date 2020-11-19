@@ -1,7 +1,8 @@
-import Nav from '../components/nav'
+import Nav from '../components/Navigation'
 import Head from 'next/head'
 import DirectusSDK from "@directus/sdk-js"
 import { useEffect } from 'react'
+import Layout from '../components/Layout'
 
 
 export async function getStaticProps() {
@@ -27,24 +28,35 @@ export async function getStaticProps() {
 
 
 export default function ResourcesPage({ resources, optOut, setOptOut, dismissPrivacyBanner, setDismissPrivacyBanner }) {
+    const seo = {
+        title: "#PeoplesVaccineKE - Resources",
+        description: "Resources you can use to learn more about the #PeoplesVaccineKE campaign.",
+        canonical: "https://peoplesvaccine.co.ke/resources",
+        openGraph: {
+            url: 'https://peoplesvaccine.co.ke/resources',
+            title: '#PeoplesVaccineKE - Resources',
+            description: 'Resources you can use to learn more about the #PeoplesVaccineKE campaign.',
+            images: [
+                {
+                    url: 'https://peoplesvaccine.co.ke/images/logo-banner.jpg',
+                    width: 800,
+                    height: 292,
+                    alt: 'Og Image Alt',
+                },
+                {
+                    url: 'https://peoplesvaccine.co.ke/images/logo-banner.png',
+                    width: 1244,
+                    height: 454,
+                    alt: 'Og Image Alt Second',
+                }
+            ],
+        }
+    }
     useEffect(() => {
         window.twttr.widgets.load()
     })
     return (
-        <>
-            <Head>
-                <title>#PeoplesVaccineKE - Resources</title>
-                <meta name="title" content="#PeoplesVaccineKE - Resources" />
-                <meta name="description" content="Resources you can use to learn more about the #PeoplesVaccineKE campaign." />
-                <meta name="twitter:title" content="#PeoplesVaccineKE - Resources" />
-                <meta name="twitter:description" content="Resources you can use to learn more about the #PeoplesVaccineKE campaign." />
-                <meta property="og:title" content="#PeoplesVaccineKE - Resources" />
-                <meta property="og:description" content="Resources you can use to learn more about the #PeoplesVaccineKE campaign." />
-                <meta name="twitter:url" content="https://peoplesvaccine.co.ke/resources" />
-                <meta property="og:url" content="https://peoplesvaccine.co.ke/resources" />
-                <meta property="og:type" content="website" />
-            </Head>
-            <Nav optOut={optOut} setOptOut={setOptOut} dismissPrivacyBanner={dismissPrivacyBanner} setDismissPrivacyBanner={setDismissPrivacyBanner} />
+        <Layout seo={seo} optOut={optOut} setOptOut={setOptOut} dismissPrivacyBanner={dismissPrivacyBanner} setDismissPrivacyBanner={setDismissPrivacyBanner}>
             <div className="grid grid-cols-1 lg:grid-cols-2 mx-5 lg:mx-20">
                 {resources.map(resource => {
                     if (resource.resource_link.startsWith("https://twitter.com")) {
@@ -66,8 +78,6 @@ export default function ResourcesPage({ resources, optOut, setOptOut, dismissPri
                     )
                 })}
             </div>
-
-
-        </>
+        </Layout>
     )
 }

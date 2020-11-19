@@ -5,7 +5,7 @@ export default function PrivacyPolicyBanner({ optOut, setOptOut, dismissPrivacyB
     return (
         <>
             {!dismissPrivacyBanner ?
-                <div id='privacy-policy-banner' style={{ backgroundColor: '#a0d6dc', borderColor: '#993333' }} className='w-auto flex justify-evenly fixed bottom-0 left-0 right-0 mb-2 border-2 mx-2 lg:mx-40 py-2 px-2 lg:px-0'>
+                <div id='privacy-policy-banner' style={{ backgroundColor: '#a0d6dc', borderColor: '#993333' }} className='w-auto flex justify-evenly fixed bottom-0 left-0 right-0 mb-2 border-2 mx-2 lg:mx-40 py-2 px-2 lg:px-0 z-20'>
                     <Link href='/privacy'>
                         <a className="no-underline">This website uses cookies. To read more about our Privacy Policy, click <span style={{ color: '#993333' }}>here.</span></a>
                     </Link>
