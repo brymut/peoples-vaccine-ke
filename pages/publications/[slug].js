@@ -1,14 +1,20 @@
 import DirectusSDK from "@directus/sdk-js"
+import useSWR from 'swr'
+import { useState, useEffect } from 'react'
+
 import Layout from '../../components/Layout'
 import Link from "next/link"
+
+const fetcher = url => fetch(url).then(r => r.json())
+
+const client = new DirectusSDK({
+    url: "https://api.peoplesvaccine.co.ke/",
+    project: "peoples-vaccine",
+})
 
 
 export async function getStaticProps({params}) {
     let publication;
-    const client = new DirectusSDK({
-        url: "https://api.peoplesvaccine.co.ke/",
-        project: "peoples-vaccine",
-    })
     await client.getItems('publications', {
         filter: {
             slug: {
@@ -17,10 +23,9 @@ export async function getStaticProps({params}) {
         }
     })
         .then(data => {
-            data.data.map(fetchedPublication => {
-                publication = fetchedPublication
-            })
-        })
+            data.data.map( fetchedPublication => {
+                publication = fetchedPublication 
+        })})
         .catch(error => console.log(error))
     return {
         props: {
@@ -40,6 +45,7 @@ export async function getStaticPaths() {
     await client.getItems('publications')
         .then(data => {
             data.data.map(publication => {
+                console.log('the pibl', publication)
                 publications.push(publication)
             })
         })
@@ -53,6 +59,13 @@ export async function getStaticPaths() {
     // { fallback: false } means other routes should 404.
     return { paths, fallback: false }
   }
+
+const DownloadLink = ({data, error, pdfFilename}) =>{
+    if (error) return null
+    if (!data) return <p className="lg:mx-32 mx-8 mb-32">loading download link</p>
+    const downloadUrl = `https://api.peoplesvaccine.co.ke${data.data.data.asset_url}`
+    return <div className="lg:mx-32 mx-8 mb-32"><a href={downloadUrl} target="_blank" style={{ color: "#993333", fontSize: "14px", fontFamily: 'Montserrat', fontWeight: '700', fontStyle: 'italic' }} >Click or tap here to get the pdf version of this publication.</a></div>
+}
 
 
 export default function PublicationPage({ publication, optOut, setOptOut, dismissPrivacyBanner, setDismissPrivacyBanner }) {
@@ -80,6 +93,8 @@ export default function PublicationPage({ publication, optOut, setOptOut, dismis
             ],
         }
     }
+    const { data, error } = useSWR(`https://api.peoplesvaccine.co.ke/peoples-vaccine/files/${publication.pdf}`, fetcher)
+    const pdfFilename = `${publication.title}.pdf`
     return (
         <Layout seo={seo} optOut={optOut} setOptOut={setOptOut} dismissPrivacyBanner={dismissPrivacyBanner} setDismissPrivacyBanner={setDismissPrivacyBanner}>
             <div className="md:hidden">
@@ -98,7 +113,8 @@ export default function PublicationPage({ publication, optOut, setOptOut, dismis
                     {publication.author}
                 </h2>
             </div>
-            <div className="mt-10 lg:mt-4 lg:mx-32 mx-8 mb-32 lg:items-center publication" dangerouslySetInnerHTML={{ __html: publication.text }}></div>
+            <div className="mt-10 lg:mt-4 lg:mx-32 mx-8 mb-5 lg:items-center publication" dangerouslySetInnerHTML={{ __html: publication.text }}></div>
+            <DownloadLink data={data} error={error} pdfFilename={pdfFilename} />
         </Layout >
     )
 }
