@@ -1,6 +1,7 @@
 import DirectusSDK from "@directus/sdk-js"
 import useSWR from 'swr'
 import { useState, useEffect } from 'react'
+import { ArticleJsonLd } from 'next-seo';
 
 import Layout from '../../components/Layout'
 import Link from "next/link"
@@ -95,8 +96,20 @@ export default function PublicationPage({ publication, optOut, setOptOut, dismis
     }
     const { data, error } = useSWR(`https://api.peoplesvaccine.co.ke/peoples-vaccine/files/${publication.pdf}`, fetcher)
     const pdfFilename = `${publication.title}.pdf`
+    console.log(publication)
     return (
         <Layout seo={seo} optOut={optOut} setOptOut={setOptOut} dismissPrivacyBanner={dismissPrivacyBanner} setDismissPrivacyBanner={setDismissPrivacyBanner}>
+            <ArticleJsonLd
+                url={publication.slug}
+                title={publication.title}
+                images={['https://peoplesvaccine.co.ke/images/logo-banner.jpg','https://peoplesvaccine.co.ke/images/logo-banner.png']}
+                datePublished={publication.created_on}
+                dateModified={publication.modified_on}
+                authorName={publication.author}
+                publisherName="#PeoplesVaccineKE"
+                publisherLogo="https://peoplesvaccine.co.ke/images/logo-banner.jpg"
+                description={publication.summary}
+            />
             <div className="md:hidden">
                 <h1 style={{ color: "#993333", fontSize: "24px", fontFamily: 'Montserrat', fontWeight: '700', fontStyle: 'italic' }} className="text-center mt-10">
                     {publication.title}
