@@ -29,13 +29,13 @@ export async function getStaticProps() {
 
 export default function ResourcesPage({ resources, optOut, setOptOut, dismissPrivacyBanner, setDismissPrivacyBanner }) {
     const seo = {
-        title: "#PeoplesVaccineKE - Resources",
-        description: "Resources you can use to learn more about the #PeoplesVaccineKE campaign.",
+        title: "Important Resources",
+        description: "Collected material from different sources regarding information on the vaccination cycle and its concerns globally.",
         canonical: "https://peoplesvaccine.co.ke/resources",
         openGraph: {
             url: 'https://peoplesvaccine.co.ke/resources',
-            title: '#PeoplesVaccineKE - Resources',
-            description: 'Resources you can use to learn more about the #PeoplesVaccineKE campaign.',
+            title: 'Important Resources',
+            description: 'Collected material from different sources regarding information on the vaccination cycle and its concerns globally.',
             images: [
                 {
                     url: 'https://peoplesvaccine.co.ke/images/logo-banner.jpg',
@@ -57,6 +57,12 @@ export default function ResourcesPage({ resources, optOut, setOptOut, dismissPri
     })
     return (
         <Layout seo={seo} optOut={optOut} setOptOut={setOptOut} dismissPrivacyBanner={dismissPrivacyBanner} setDismissPrivacyBanner={setDismissPrivacyBanner}>
+            <h3 style={{
+                color: '#993333',
+                fontFamily: 'Montserrat',
+                fontWeight: '600',
+                fontStyle: 'italic',
+            }} className="mx-5 lg:mx-20 mt-10">Collected material from different sources regarding information on the vaccination cycle and its concerns globally.</h3>
             <div className="grid grid-cols-1 lg:grid-cols-2 mx-5 lg:mx-20">
                 {resources.map(resource => {
                     if (resource.resource_link.startsWith("https://twitter.com")) {
@@ -67,7 +73,7 @@ export default function ResourcesPage({ resources, optOut, setOptOut, dismissPri
                         )
                     }
                     return (
-                        <div key={resource.resource_id} className="my-4 ml-6">
+                        <div key={resource.resource_id} className="my-4 ml-4">
                             <a href={resource.resource_link}><h3 style={{
                                 color: '#993333',
                                 fontFamily: 'Montserrat',

@@ -3,7 +3,7 @@
 import { NextSeo } from 'next-seo';
 import Navigation from './Navigation'
 import PrivacyPolicyBanner from './privacyPolicyBanner'
-
+import { SocialProfileJsonLd } from 'next-seo';
 
 // import Meta from './meta'
 
@@ -26,6 +26,14 @@ export default function Layout({ children, seo, optOut, setOptOut, dismissPrivac
                     site: '@VaccineKe',
                     cardType: 'summary_large_image',
                 }}
+            />
+            <SocialProfileJsonLd
+                type="Organisation"
+                name="#PeoplesvaccineKE"
+                url="https://peoplesvaccine.co.ke"
+                sameAs={[
+                    'https://www.instagram.com/peoplesvaccineke/',
+                ]}
             />
             <Navigation />
             <PrivacyPolicyBanner optOut={optOut} setOptOut={setOptOut} dismissPrivacyBanner={dismissPrivacyBanner} setDismissPrivacyBanner={setDismissPrivacyBanner} />

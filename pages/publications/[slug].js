@@ -14,7 +14,7 @@ const client = new DirectusSDK({
 })
 
 
-export async function getStaticProps({params}) {
+export async function getStaticProps({ params }) {
     let publication;
     await client.getItems('publications', {
         filter: {
@@ -24,9 +24,10 @@ export async function getStaticProps({params}) {
         }
     })
         .then(data => {
-            data.data.map( fetchedPublication => {
-                publication = fetchedPublication 
-        })})
+            data.data.map(fetchedPublication => {
+                publication = fetchedPublication
+            })
+        })
         .catch(error => console.log(error))
     return {
         props: {
@@ -51,17 +52,17 @@ export async function getStaticPaths() {
             })
         })
         .catch(error => console.log(error))
-    
-    const paths = publications.map((publication) =>({
+
+    const paths = publications.map((publication) => ({
         params: { slug: publication.slug }
     }))
-  
+
     // We'll pre-render only these paths at build time.
     // { fallback: false } means other routes should 404.
     return { paths, fallback: false }
-  }
+}
 
-const DownloadLink = ({data, error, pdfFilename}) =>{
+const DownloadLink = ({ data, error }) => {
     if (error) return null
     if (!data) return <p className="lg:mx-32 mx-8 mb-32">loading download link</p>
     const downloadUrl = `https://api.peoplesvaccine.co.ke${data.data.data.asset_url}`
@@ -102,7 +103,7 @@ export default function PublicationPage({ publication, optOut, setOptOut, dismis
             <ArticleJsonLd
                 url={publication.slug}
                 title={publication.title}
-                images={['https://peoplesvaccine.co.ke/images/logo-banner.jpg','https://peoplesvaccine.co.ke/images/logo-banner.png']}
+                images={['https://peoplesvaccine.co.ke/images/logo-banner.jpg', 'https://peoplesvaccine.co.ke/images/logo-banner.png']}
                 datePublished={publication.created_on}
                 dateModified={publication.modified_on}
                 authorName={publication.author}

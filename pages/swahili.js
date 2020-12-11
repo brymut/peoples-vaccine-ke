@@ -2,6 +2,8 @@ import Navigation from '../components/Navigation'
 import Head from 'next/head'
 import DirectusSDK from "@directus/sdk-js";
 import Layout from '../components/Layout';
+import Image from "next/image"
+
 
 
 export async function getStaticProps() {
@@ -73,37 +75,44 @@ export default function SwahiliPage({ demands, teamDescription, optOut, setOptOu
         Tunaamini kwamba chanjo ya COVID-19 inapaswa kutambuliwa kama faida ya umma na ufikiaji unapaswa kuwa kwa masilahi ya watu wote kila mahali, sio wale tu ambao wanaweza kuimudu.
         </p>
                 </>
-                <img src='/images/homepage.jpg' alt='homepage peoplesvaccine image' className=" w-9/12 lg:w-4/12 mx-auto my-5 lg:my-0 lg:ml-20 " />
+                <Image
+                    src="/images/homepage.jpg"
+                    alt="homepage peoplesvaccine image"
+                    width={390}
+                    height={520}
 
+                />
             </div>
             <p className="text-center mx-8 mt-4 lg:mx-56 lg:mt-12">Lengo la kampeni hii ni kuhakikisha mtiririko wa bure na upatikanaji wa chanjo ya COVID-19. Mahitaji haya yamewekwa kuunda utaratibu unaolengwa na jamii kuhakikisha kila mmoja wetu anaweza kupata chanjo bila malipo au masharti, kila mahali ulimwenguni na kujifunza kutoka kwa wanaharakati wa 'chanjo ya watu' (People’s vaccine) ulimwenguni kote, kwa nguvu na lazima tuutekeleza hatua hizi nchini Kenya.
       <br /><br />
       Tunakusudia kuimarisha jamii zetu zote na kuhakikisha kuwa chanjo hii sio tu kwa jamii ya kisiasa, wasomi na wale ambao wanaweza kuitunukia, inapaswa kuwa ya kila mtu ilhali ya cheo.</p>
             <section id='demands' className="flex flex-col items-center mt-8">
                 <div>
-                    <h2 style={{
+                    <h1 style={{
                         color: '#993333',
                         fontFamily: 'Montserrat',
                         fontWeight: '900',
+                        fontStyle: 'italic',
                         textAlign: 'center'
-                    }} className="text-5xl mt-12">MATAKWA YETU</h2>
-                    <h3 style={{
+                    }} className="text-5xl mt-12">MATAKWA YETU</h1>
+                    <h2 style={{
                         color: '#993333',
                         fontFamily: 'Montserrat',
                         fontWeight: '700',
+                        fontStyle: 'italic',
                         textAlign: 'center'
-                    }} className="text-2xl mt-5 text-center">Hatua za haraka za utekelezaji wa Chanjo endelevu ya wote nchini Kenya</h3>
+                    }} className="text-2xl mt-5 text-center">Hatua za haraka za utekelezaji wa Chanjo endelevu ya wote nchini Kenya</h2>
                     <p className="text-xl mt-10 text-center">Sisi waKenya tunadai kuwa mara chanjo ya COVID-19 itakapopatikana:</p>
                 </div>
                 {demands.map(demand => {
                     return (
                         <div className='mt-8' key={demand.demand_number}>
-                            <h3 style={{
+                            <h2 style={{
                                 color: '#993333',
                                 fontFamily: 'Montserrat',
                                 fontWeight: '700',
                                 textAlign: 'center'
-                            }} className="text-3xl mt-10 mx-3 lg:mx-20">{demand.demand_number}</h3>
+                            }} className="text-3xl mt-10 mx-3 lg:mx-20">{demand.demand_number}</h2>
                             <h3 style={{
                                 color: '#993333',
                                 fontFamily: 'Montserrat',
@@ -111,21 +120,29 @@ export default function SwahiliPage({ demands, teamDescription, optOut, setOptOu
                                 textAlign: 'center'
                             }} className="text-xl mt-5 mx-3 lg:mx-32">{demand.demand_subtitle_swahili}</h3>
                             <div className='mx-10 lg:flex lg:mx-48 mt-5'>
-                                <p className='lg:text-xl'>{demand.demandtext_swahili}</p>
+                                <p className='lg:text-xl text-center'>{demand.demandtext_swahili}</p>
                             </div>
                         </div>
                     )
                 })}
-                <img src='/images/immediate-measures-summary-swahili.jpg' alt='picha iliyoandikiwa hatua za haraka za utekelezaji wa Chanjo endelevu' className='object-center w-5/6 lg:w-1/2 mt-20'></img>
+                <div className="mt-20 mx-10 lg:mx-0">
+                    <Image
+                        src="/images/immediate-measures-summary-swahili.jpg"
+                        alt="picha iliyoandikiwa hatua za haraka za utekelezaji wa Chanjo endelevu"
+                        width={512}
+                        height={256}
+                    />
+                </div>
 
             </section>
             <section id='the team'>
-                <h3 style={{
+                <h1 style={{
                     color: '#993333',
                     fontFamily: 'Montserrat',
                     fontWeight: '900',
-                    textAlign: 'center'
-                }} className="text-4xl mt-12">TIMU</h3>
+                    textAlign: 'center',
+                    fontStyle: 'italic'
+                }} className="text-4xl mt-12">TIMU</h1>
                 <p className='text-center mx-12 lg:mx-40 mt-5 mb-10'>{teamDescription}</p>
             </section>
             <section id='attribution' className='mb-32' >

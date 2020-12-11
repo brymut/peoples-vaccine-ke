@@ -36,13 +36,13 @@ export async function getStaticProps() {
 
 export default function IndexPage({ demands, teamDescription, optOut, setOptOut, dismissPrivacyBanner, setDismissPrivacyBanner }) {
   const seo = {
-    title: "#PeoplesVaccineKE - Demands",
-    description: "The #PeoplesVaccineKE is a worldwide campaign to push for the free distribution and unconditional access for the COVID-19 vaccine.",
+    title: "Our Demands",
+    description: "The #PeoplesVaccine is a global campaign to push for the free and accessible distribution of the COVID-19 vaccine, we collectively believe that the COVID-19 vaccine should be treated as a nationwide public good and access should be in the interests of all people everywhere.",
     canonical: "https://peoplesvaccine.co.ke/",
     openGraph: {
       url: 'https://peoplesvaccine.co.ke/',
-      title: '#PeoplesVaccineKE - Demands',
-      description: 'The #PeoplesVaccineKE is a worldwide campaign to push for the free distribution and unconditional access for the COVID-19 vaccine.',
+      title: 'Our Demands',
+      description: 'The #PeoplesVaccine is a global campaign to push for the free and accessible distribution of the COVID-19 vaccine, we collectively believe that the COVID-19 vaccine should be treated as a nationwide public good and access should be in the interests of all people everywhere.',
       images: [
         {
           url: 'https://peoplesvaccine.co.ke/images/logo-banner.jpg',
@@ -91,31 +91,31 @@ export default function IndexPage({ demands, teamDescription, optOut, setOptOut,
       We aim to strengthen all our communities and to ensure that this vaccine is not just for the political class, elite and those who can afford, it SHOULD be for EVERYONE.</p>
       <section id='demands' className="flex flex-col items-center mt-8">
         <div>
-          <h2 style={{
+          <h1 style={{
             color: '#993333',
             fontFamily: 'Montserrat',
             fontWeight: '900',
             fontStyle: 'italic',
             textAlign: 'center'
-          }} className="text-5xl mt-12">OUR DEMANDS</h2>
-          <h3 style={{
+          }} className="text-5xl mt-12">OUR DEMANDS</h1>
+          <h2 style={{
             color: '#993333',
             fontFamily: 'Montserrat',
             fontWeight: '700',
             fontStyle: 'italic',
             textAlign: 'center'
-          }} className="mx-5 lg:mx-0 text-2xl mt-5 text-center">Immediate measures for the execution of a sustainable People’s Vaccine in Kenya</h3>
+          }} className="mx-5 lg:mx-0 text-2xl mt-5 text-center">Immediate measures for the execution of a sustainable People’s Vaccine in Kenya</h2>
           <p className="mx-5 lg:mx-0 text-xl mt-10 text-center">We the people of Kenya demand that once the COVID-19 vaccine is found:</p>
         </div>
         {demands.map(demand => {
           return (
             <div className='mt-8' key={demand.demand_number}>
-              <h3 style={{
+              <h2 style={{
                 color: '#993333',
                 fontFamily: 'Montserrat',
                 fontWeight: '700',
                 textAlign: 'center'
-              }} className="text-3xl mt-10 mx-3 lg:mx-20">{demand.demand_number}</h3>
+              }} className="text-3xl mt-10 mx-3 lg:mx-20">{demand.demand_number}</h2>
               <h3 style={{
                 color: '#993333',
                 fontFamily: 'Montserrat',
@@ -129,7 +129,7 @@ export default function IndexPage({ demands, teamDescription, optOut, setOptOut,
           )
         })}
         <div className="mt-20 mx-10 lg:mx-0">
-        <Image
+          <Image
             src="/images/immediate-measures-summary.jpeg"
             alt="immediate measures summary image with all demands listed"
             width={512}
@@ -138,13 +138,13 @@ export default function IndexPage({ demands, teamDescription, optOut, setOptOut,
         </div>
       </section>
       <section id='the team'>
-        <h3 style={{
+        <h1 style={{
           color: '#993333',
           fontFamily: 'Montserrat',
           fontWeight: '900',
           textAlign: 'center',
           fontStyle: 'italic'
-        }} className="text-4xl mt-12">THE TEAM</h3>
+        }} className="text-4xl mt-12">THE TEAM</h1>
         <p className='text-center mx-12 lg:mx-40 mt-5 mb-10'>{teamDescription}</p>
       </section>
       <section id='attribution' className='mb-32' >

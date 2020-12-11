@@ -33,13 +33,13 @@ export async function getStaticProps() {
 
 export default function ContactPage({ contacts, optOut, setOptOut, dismissPrivacyBanner, setDismissPrivacyBanner }) {
     const seo = {
-        title: "#PeoplesVaccineKE - Contact",
-        description: "Reach out to the #PeoplesVaccineKE campaign",
+        title: "Contact us",
+        description: "Reach out to the #PeoplesVaccineKE campaign via our social media pages, instagram or twitter , email or though our website contact form.",
         canonical: "https://peoplesvaccine.co.ke/contact",
         openGraph: {
             url: 'https://peoplesvaccine.co.ke/contact',
-            title: '#PeoplesVaccineKE - Contact',
-            description: 'Reach out to the #PeoplesVaccineKE campaign',
+            title: 'Contact us',
+            description: 'Reach out to the #PeoplesVaccineKE campaign via our social media pages, instagram or twitter , email or though our website contact form.',
             images: [
                 {
                     url: 'https://peoplesvaccine.co.ke/images/logo-banner.jpg',
@@ -77,32 +77,32 @@ export default function ContactPage({ contacts, optOut, setOptOut, dismissPrivac
     return (
         <Layout seo={seo} optOut={optOut} setOptOut={setOptOut} dismissPrivacyBanner={dismissPrivacyBanner} setDismissPrivacyBanner={setDismissPrivacyBanner}>
             <section id='contact-us-socials' className="mx-24 mt-10">
-                <h3 style={{
+                <h1 style={{
                     color: '#993333',
                     fontFamily: 'Montserrat',
                     fontWeight: '900',
                     fontStyle: 'italic'
-                }} className=" hidden lg:block text-4xl">Contact us via:</h3>
-                <h3 style={{
+                }} className=" hidden lg:block text-4xl">Contact us via:</h1>
+                <h1 style={{
                     color: '#993333',
                     fontFamily: 'Montserrat',
                     fontWeight: '900',
                     fontStyle: 'italic'
-                }} className=" text-xl lg:hidden">Contact us via:</h3>
+                }} className=" text-xl lg:hidden">Contact us via:</h1>
                 <ul style={{ color: '#993333' }} className="flex flex-col lg:flex-row justify-around mx-6 lg:mx-40 mt-5">
                     {contacts.map(contactMethod => {
                         if (contactMethod.contact_method === 'Email') {
-                            return <li className='my-2 lg:my-0' key={contactMethod.id}><FontAwesomeIcon icon={faEnvelope} /><a className='ml-5' href={`mailto:${contactMethod.link}`}>{contactMethod.contact_method}</a></li>
+                            return <li className='my-2 lg:my-0' key={contactMethod.id}><FontAwesomeIcon icon={faEnvelope} /><a className='ml-5' href={`mailto:${contactMethod.link}`}><h2>{contactMethod.contact_method}</h2></a></li>
                         } else {
                             switch (contactMethod.contact_method) {
                                 case 'Facebook':
-                                    return <li className='my-2 lg:my-0' key={contactMethod.id}><FontAwesomeIcon icon={faFacebook} /><a className='ml-5' href={contactMethod.link}>{contactMethod.contact_method}</a></li>
+                                    return <li className='my-2 lg:my-0' key={contactMethod.id}><FontAwesomeIcon icon={faFacebook} /><a className='ml-5' href={contactMethod.link}><h2>{contactMethod.contact_method}</h2></a></li>
                                 case 'Instagram':
-                                    return <li className='my-2 lg:my-0' key={contactMethod.id}><FontAwesomeIcon icon={faInstagram} /><a className='ml-5' href={contactMethod.link}>{contactMethod.contact_method}</a></li>
+                                    return <li className='my-2 lg:my-0' key={contactMethod.id}><FontAwesomeIcon icon={faInstagram} /><a className='ml-5' href={contactMethod.link}><h2>{contactMethod.contact_method}</h2></a></li>
                                 case 'Twitter':
-                                    return <li className='my-2 lg:my-0' key={contactMethod.id}><FontAwesomeIcon icon={faTwitter} /><a className='ml-5' href={contactMethod.link}>{contactMethod.contact_method}</a></li>
+                                    return <li className='my-2 lg:my-0' key={contactMethod.id}><FontAwesomeIcon icon={faTwitter} /><a className='ml-5' href={contactMethod.link}><h2>{contactMethod.contact_method}</h2></a></li>
                                 default:
-                                    return <li className='my-2 lg:my-0' key={contactMethod.id}><a href={contactMethod.link}>{contactMethod.contact_method}</a></li>
+                                    return <li className='my-2 lg:my-0' key={contactMethod.id}><a href={contactMethod.link}><h2>{contactMethod.contact_method}</h2></a></li>
                             }
                         }
                     })
