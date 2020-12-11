@@ -6,13 +6,13 @@ import Layout from '../components/Layout'
 
 export default function ShareYourVoicePage({ optOut, setOptOut, dismissPrivacyBanner, setDismissPrivacyBanner }) {
     const seo = {
-        title: "#PeoplesVaccineKE - Share your voice",
-        description: "Share your voice for #PeoplesVaccineKE",
+        title: "Share your voice",
+        description: "Share your voice to help support the #PeoplesVaccineKE campaign efforts",
         canonical: "https://peoplesvaccine.co.ke/shareyourvoice",
         openGraph: {
             url: 'https://peoplesvaccine.co.ke/shareyourvoice',
-            title: '#PeoplesVaccineKE - Share your voice',
-            description: 'Share your voice for #PeoplesVaccineKE',
+            title: 'Share your voice',
+            description: 'Share your voice to help support the #PeoplesVaccineKE campaign efforts',
             images: [
                 {
                     url: 'https://peoplesvaccine.co.ke/images/logo-banner.jpg',
