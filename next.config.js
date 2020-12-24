@@ -11,6 +11,11 @@ module.exports = withPWA({
                 source: '/youtube',
                 destination: 'https://www.youtube.com/channel/UCUUxFBPmi5FfC4XAsTikKrQ',
                 permanent: false,
+            },
+            {
+                source: '/youtube/locating-grief',
+                destination: 'https://www.youtube.com/watch?v=NyZpIzcbxCs',
+                permanent: true,
             }
         ]
     },
