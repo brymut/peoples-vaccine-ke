@@ -97,11 +97,10 @@ export default function PublicationPage({ publication, optOut, setOptOut, dismis
     }
     const { data, error } = useSWR(`https://api.peoplesvaccine.co.ke/peoples-vaccine/files/${publication.pdf}`, fetcher)
     const pdfFilename = `${publication.title}.pdf`
-    console.log(publication)
     return (
         <Layout seo={seo} optOut={optOut} setOptOut={setOptOut} dismissPrivacyBanner={dismissPrivacyBanner} setDismissPrivacyBanner={setDismissPrivacyBanner}>
             <ArticleJsonLd
-                url={publication.slug}
+                url={`https://peoplesvaccine.co.ke/publications/${publication.slug}`}
                 title={publication.title}
                 images={['https://peoplesvaccine.co.ke/images/logo-banner.jpg', 'https://peoplesvaccine.co.ke/images/logo-banner.png']}
                 datePublished={publication.created_on}

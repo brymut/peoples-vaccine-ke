@@ -12,8 +12,6 @@ export async function getStaticProps() {
     await client.getItems('shareyourvoice')
         .then(data => {
             data.data.map(shareyourvoice => {
-                console.log(shareyourvoice)
-                console.log('hererere')
                 shareyourvoiceItems.push(shareyourvoice)
             })
         })
