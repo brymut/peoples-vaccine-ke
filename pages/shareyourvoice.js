@@ -26,13 +26,13 @@ export async function getStaticProps() {
 
 export default function ShareYourVoicePage({ shareyourvoiceItems, optOut, setOptOut, dismissPrivacyBanner, setDismissPrivacyBanner }) {
     const seo = {
-        title: "Share your voice",
-        description: "Share your voice to help support the #PeoplesVaccineKE campaign efforts",
+        title: "Share your voice - #PeoplesVaccineKE",
+        description: "How you can get involved and take action in advocating for a free, accessible and safe vaccine and immediate initiation of imperative and universal healthcare in Kenya.",
         canonical: "https://peoplesvaccine.co.ke/shareyourvoice",
         openGraph: {
             url: 'https://peoplesvaccine.co.ke/shareyourvoice',
-            title: 'Share your voice',
-            description: 'Share your voice to help support the #PeoplesVaccineKE campaign efforts',
+            title: 'Share your voice - #PeoplesVaccineKE',
+            description: 'How you can get involved and take action in advocating for a free, accessible and safe vaccine and immediate initiation of imperative and universal healthcare in Kenya.',
             images: [
                 {
                     url: 'https://peoplesvaccine.co.ke/images/logo-banner.jpg',
@@ -52,6 +52,12 @@ export default function ShareYourVoicePage({ shareyourvoiceItems, optOut, setOpt
 
     return (
         <Layout seo={seo} optOut={optOut} setOptOut={setOptOut} dismissPrivacyBanner={dismissPrivacyBanner} setDismissPrivacyBanner={setDismissPrivacyBanner}>
+            <h3 style={{
+                color: '#993333',
+                fontFamily: 'Montserrat',
+                fontWeight: '600',
+                fontStyle: 'italic',
+            }} className="mt-10 mx-5 lg:mx-24">Please see below on how you can get involved and take action in advocating for a free, accessible and safe vaccine and immediate initiation of imperative and universal healthcare in Kenya.</h3>
             {shareyourvoiceItems.map(shareyourvoiceItem => {
                 return (
                     <div key={shareyourvoiceItem.id} className="mx-5 lg:mx-24 mt-10">
