@@ -41,15 +41,15 @@ export default function LocatingGriefPage({ locatingGrief, optOut, setOptOut, di
             description: `${locatingGrief.summary}`,
             images: [
                 {
-                    url: 'https://peoplesvaccine.co.ke/images/logo-banner.jpg',
-                    width: 800,
-                    height: 292,
+                    url: 'https://peoplesvaccine.co.ke/images/locating-grief-as-a-community.png',
+                    width: 560,
+                    height: 300,
                     alt: 'Og Image Alt',
                 },
                 {
-                    url: 'https://peoplesvaccine.co.ke/images/logo-banner.png',
-                    width: 1244,
-                    height: 454,
+                    url: 'https://peoplesvaccine.co.ke/images/locating-grief-as-a-community.png',
+                    width: 560,
+                    height: 300,
                     alt: 'Og Image Alt Second',
                 }
             ],
