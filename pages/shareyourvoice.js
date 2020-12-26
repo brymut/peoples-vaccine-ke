@@ -54,7 +54,7 @@ export default function ShareYourVoicePage({ shareyourvoiceItems, optOut, setOpt
         <Layout seo={seo} optOut={optOut} setOptOut={setOptOut} dismissPrivacyBanner={dismissPrivacyBanner} setDismissPrivacyBanner={setDismissPrivacyBanner}>
             {shareyourvoiceItems.map(shareyourvoiceItem => {
                 return (
-                    <div key={shareyourvoiceItem.id} className="mx-24 mt-10">
+                    <div key={shareyourvoiceItem.id} className="mx-5 lg:mx-24 mt-10">
                         <Link href={`/${shareyourvoiceItem.url}`}><a>
                             <h2 style={{
                                 color: '#993333',

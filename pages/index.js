@@ -67,7 +67,7 @@ export default function IndexPage({ demands, teamDescription, optOut, setOptOut,
     <Layout seo={seo} optOut={optOut} setOptOut={setOptOut} dismissPrivacyBanner={dismissPrivacyBanner} setDismissPrivacyBanner={setDismissPrivacyBanner}>
       <div className="mt-10 lg:mt-6 lg:mx-32 lg:flex lg:items-center">
         <>
-          <p className="text-center mx-8 lg:w-2/6 lg:ml-32"> The #PeoplesVaccine is a global campaign to push for the free distribution and unconditional access for the COVID-19 vaccine, we collectively believe that the COVID-19 vaccine should be treated as a nationwide public good and access should be in the interests of all people everywhere, not just those who can afford it.
+          <p className="text-center mx-5 lg:w-2/6 lg:ml-32"> The #PeoplesVaccine is a global campaign to push for the free distribution and unconditional access for the COVID-19 vaccine, we collectively believe that the COVID-19 vaccine should be treated as a nationwide public good and access should be in the interests of all people everywhere, not just those who can afford it.
         </p>
         </>
         <div className=" w-9/12 lg:w-4/12 mx-auto my-5 lg:my-0 lg:ml-20">
@@ -82,7 +82,7 @@ export default function IndexPage({ demands, teamDescription, optOut, setOptOut,
 
 
       </div>
-      <p className="text-center mx-8 mt-4 lg:mx-56 lg:mt-12">
+      <p className="text-center mx-5 mt-4 lg:mx-56 lg:mt-12">
         In this regard, we have joined the global call for a #PeoplesVaccine and are working to establish our localized demands under #PeoplesVaccineKE in Kenya.
         The end goal of this campaign is to ensure the free and unconditional accessibility to the COVID-19 vaccine for all.
         <br /><br />
@@ -121,8 +121,8 @@ export default function IndexPage({ demands, teamDescription, optOut, setOptOut,
                 fontFamily: 'Montserrat',
                 fontWeight: '700',
                 textAlign: 'center'
-              }} className="text-xl mt-5 mx-3 lg:mx-32">{demand.demand_subtitle}</h3>
-              <div className='mx-10 lg:flex lg:mx-48 mt-5'>
+              }} className="text-xl mt-5 mx-8 lg:mx-32">{demand.demand_subtitle}</h3>
+              <div className='mx-3 lg:flex lg:mx-48 mt-5'>
                 <p className='lg:text-xl text-center '>{demand.demandtext}</p>
               </div>
             </div>
