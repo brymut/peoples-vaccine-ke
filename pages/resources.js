@@ -29,12 +29,12 @@ export async function getStaticProps() {
 
 export default function ResourcesPage({ resources, optOut, setOptOut, dismissPrivacyBanner, setDismissPrivacyBanner }) {
     const seo = {
-        title: "Important Resources",
+        title: "Important Resources - #PeoplesVaccineKE",
         description: "Collected material from different sources regarding information on the vaccination cycle and its concerns globally.",
         canonical: "https://peoplesvaccine.co.ke/resources",
         openGraph: {
             url: 'https://peoplesvaccine.co.ke/resources',
-            title: 'Important Resources',
+            title: 'Important Resources - #PeoplesVaccineKE',
             description: 'Collected material from different sources regarding information on the vaccination cycle and its concerns globally.',
             images: [
                 {

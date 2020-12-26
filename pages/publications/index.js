@@ -27,12 +27,12 @@ export async function getStaticProps() {
 
 export default function PublicationsPage({ publications, optOut, setOptOut, dismissPrivacyBanner, setDismissPrivacyBanner }) {
     const seo = {
-        title: "Publications",
+        title: "Publications - #PeoplesVaccineKE",
         description: "Written and published material by the #PeoplesVaccineKE campaign and its partners.",
         canonical: "https://peoplesvaccine.co.ke/publications",
         openGraph: {
             url: 'https://peoplesvaccine.co.ke/publications',
-            title: 'Publications',
+            title: 'Publications - #PeoplesVaccineKE',
             description: 'Written and published material by the #PeoplesVaccineKE campaign and its partners.',
             images: [
                 {

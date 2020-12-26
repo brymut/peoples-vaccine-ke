@@ -36,13 +36,13 @@ export async function getStaticProps() {
 
 export default function IndexPage({ demands, teamDescription, optOut, setOptOut, dismissPrivacyBanner, setDismissPrivacyBanner }) {
   const seo = {
-    title: "Our Demands",
-    description: "The #PeoplesVaccine is a global campaign to push for the free and accessible distribution of the COVID-19 vaccine, we collectively believe that the COVID-19 vaccine should be treated as a nationwide public good and access should be in the interests of all people everywhere.",
+    title: "Our Demands - #PeoplesVaccineKE",
+    description: "The #PeoplesVaccineKE is a nationwide grassroots campaign to push for the free distribution and unconditional access for a safe COVID-19 vaccine in Kenya",
     canonical: "https://peoplesvaccine.co.ke/",
     openGraph: {
       url: 'https://peoplesvaccine.co.ke/',
-      title: 'Our Demands',
-      description: 'The #PeoplesVaccine is a global campaign to push for the free and accessible distribution of the COVID-19 vaccine, we collectively believe that the COVID-19 vaccine should be treated as a nationwide public good and access should be in the interests of all people everywhere.',
+      title: 'Our Demands - #PeoplesVaccineKE',
+      description: 'The #PeoplesVaccineKE is a nationwide grassroots campaign to push for the free distribution and unconditional access for a safe COVID-19 vaccine in Kenya',
       images: [
         {
           url: 'https://peoplesvaccine.co.ke/images/logo-banner.jpg',

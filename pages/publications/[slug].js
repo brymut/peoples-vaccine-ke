@@ -72,12 +72,12 @@ const DownloadLink = ({ data, error }) => {
 
 export default function PublicationPage({ publication, optOut, setOptOut, dismissPrivacyBanner, setDismissPrivacyBanner }) {
     const seo = {
-        title: `#PeoplesVaccineKE - ${publication.title} by ${publication.author}`,
+        title: `${publication.title} by ${publication.author} - #PeoplesVaccineKE`,
         description: `${publication.summary}`,
         canonical: `https://peoplesvaccine.co.ke/publications/${publication.slug}`,
         openGraph: {
             url: `https://peoplesvaccine.co.ke/publications/${publication.slug}`,
-            title: `#PeoplesVaccineKE - ${publication.title} by ${publication.author}`,
+            title: `${publication.title} by ${publication.author} - #PeoplesVaccineKE`,
             description: `${publication.summary}`,
             images: [
                 {
