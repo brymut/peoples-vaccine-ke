@@ -1,18 +1,38 @@
-import Nav from '../components/Navigation'
-import Head from 'next/head'
+import DirectusSDK from "@directus/sdk-js"
+import Link from "next/link"
 import { useState } from 'react'
 import Layout from '../components/Layout'
 
+export async function getStaticProps() {
+    let shareyourvoiceItems = []
+    const client = new DirectusSDK({
+        url: "https://api.peoplesvaccine.co.ke/",
+        project: "peoples-vaccine",
+    })
+    await client.getItems('shareyourvoice')
+        .then(data => {
+            data.data.map(shareyourvoice => {
+                shareyourvoiceItems.push(shareyourvoice)
+            })
+        })
+        .catch(error => console.log(error))
+    return {
+        props: {
+            shareyourvoiceItems
+        },
+        revalidate: 1,
+    }
+}
 
-export default function ShareYourVoicePage({ optOut, setOptOut, dismissPrivacyBanner, setDismissPrivacyBanner }) {
+export default function ShareYourVoicePage({ shareyourvoiceItems, optOut, setOptOut, dismissPrivacyBanner, setDismissPrivacyBanner }) {
     const seo = {
-        title: "Share your voice",
-        description: "Share your voice to help support the #PeoplesVaccineKE campaign efforts",
+        title: "Share your voice - #PeoplesVaccineKE",
+        description: "How you can get involved and take action in advocating for a free, accessible and safe vaccine and immediate initiation of imperative and universal healthcare in Kenya.",
         canonical: "https://peoplesvaccine.co.ke/shareyourvoice",
         openGraph: {
             url: 'https://peoplesvaccine.co.ke/shareyourvoice',
-            title: 'Share your voice',
-            description: 'Share your voice to help support the #PeoplesVaccineKE campaign efforts',
+            title: 'Share your voice - #PeoplesVaccineKE',
+            description: 'How you can get involved and take action in advocating for a free, accessible and safe vaccine and immediate initiation of imperative and universal healthcare in Kenya.',
             images: [
                 {
                     url: 'https://peoplesvaccine.co.ke/images/logo-banner.jpg',
@@ -29,17 +49,39 @@ export default function ShareYourVoicePage({ optOut, setOptOut, dismissPrivacyBa
             ],
         }
     }
-    const [questionnaireOpen, setQuestionnaireOpen] = useState(false)
-    const questionnairePreamble = 'We have a  questionnaire to help us understand the needs, worries and influences of Kenyans to why the need for a #peoplesVaccine is urgent and necessary. The findings of this research will be compiled into a consolidated report and published for sharing and further education.'
+
     return (
         <Layout seo={seo} optOut={optOut} setOptOut={setOptOut} dismissPrivacyBanner={dismissPrivacyBanner} setDismissPrivacyBanner={setDismissPrivacyBanner}>
-            <div className={` ${questionnaireOpen ? 'mx-0' : 'mx-6'} mb-40 lg:mx-32 mt-10 flex items-center justify-center`}>
-                {questionnaireOpen ?
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeVaBa0cYzjfUAmXuec4kTC2mRDiFcTHXcyV7BrybbxJet5MQ/viewform?embedded=true" width="100%" height="1800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-                    :
-                    <p>{questionnairePreamble}<br /><button className='pt-2' type='button' onClick={e => setQuestionnaireOpen(true)}> Click <span style={{ color: '#993333' }}>here</span> to start the questionnaire</button></p>
-                }
-            </div>
+            <h3 style={{
+                color: '#993333',
+                fontFamily: 'Montserrat',
+                fontWeight: '600',
+                fontStyle: 'italic',
+            }} className="mt-10 mx-5 lg:mx-24">Please see below on how you can get involved and take action in advocating for a free, accessible and safe vaccine and immediate initiation of imperative and universal healthcare in Kenya.</h3>
+            {shareyourvoiceItems.map(shareyourvoiceItem => {
+                return (
+                    <div key={shareyourvoiceItem.id} className="mx-5 lg:mx-24 mt-10">
+                        <Link href={`/${shareyourvoiceItem.url}`}><a>
+                            <h2 style={{
+                                color: '#993333',
+                                fontFamily: 'Montserrat',
+                                fontWeight: '600',
+                                fontStyle: 'italic',
+                                textDecoration: 'underline'
+                            }} className="text-xl">
+                                {shareyourvoiceItem.title}
+                            </h2>
+                            <p className="mt-3 mb-1">{shareyourvoiceItem.summary}</p>
+                            <span style={{
+                                color: '#993333',
+                                fontFamily: 'Montserrat',
+                                fontWeight: '600',
+                                fontStyle: 'italic',
+                            }} className="text-sm">Click to learn more...</span>
+                        </a></Link>
+                    </div>
+                )
+            })}
         </Layout>
     )
 }

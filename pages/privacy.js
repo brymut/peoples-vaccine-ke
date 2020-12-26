@@ -1,5 +1,5 @@
 import Navigation from '../components/Navigation'
-import Layout from  '../components/Layout'
+import Layout from '../components/Layout'
 import Head from 'next/head'
 import DirectusSDK from "@directus/sdk-js";
 
@@ -27,12 +27,12 @@ export async function getStaticProps() {
 
 export default function PrivacyPolicyPage({ privacyPolicyHtml, optOut, setOptOut, dismissPrivacyBanner, setDismissPrivacyBanner }) {
     const seo = {
-        title: "#PeoplesVaccineKE - Privacy",
+        title: "Privacy Policy - - #PeoplesVaccineKE",
         description: "The #PeoplesVaccineKE privacy policy statement.",
         canonical: "https://peoplesvaccine.co.ke/privacy",
         openGraph: {
             url: 'https://peoplesvaccine.co.ke/privacy',
-            title: '#PeoplesVaccineKE - Privacy',
+            title: 'Privacy Policy - #PeoplesVaccineKE',
             description: 'The #PeoplesVaccineKE privacy policy statement.',
             images: [
                 {

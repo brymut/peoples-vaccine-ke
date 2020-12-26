@@ -5,8 +5,6 @@ import Navigation from './Navigation'
 import PrivacyPolicyBanner from './privacyPolicyBanner'
 import { SocialProfileJsonLd } from 'next-seo';
 
-// import Meta from './meta'
-
 export default function Layout({ children, seo, optOut, setOptOut, dismissPrivacyBanner, setDismissPrivacyBanner }) {
     return (
         <>

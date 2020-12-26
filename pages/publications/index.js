@@ -27,12 +27,12 @@ export async function getStaticProps() {
 
 export default function PublicationsPage({ publications, optOut, setOptOut, dismissPrivacyBanner, setDismissPrivacyBanner }) {
     const seo = {
-        title: "Publications",
+        title: "Publications - #PeoplesVaccineKE",
         description: "Written and published material by the #PeoplesVaccineKE campaign and its partners.",
         canonical: "https://peoplesvaccine.co.ke/publications",
         openGraph: {
             url: 'https://peoplesvaccine.co.ke/publications',
-            title: 'Publications',
+            title: 'Publications - #PeoplesVaccineKE',
             description: 'Written and published material by the #PeoplesVaccineKE campaign and its partners.',
             images: [
                 {
@@ -59,10 +59,10 @@ export default function PublicationsPage({ publications, optOut, setOptOut, dism
                     fontFamily: 'Montserrat',
                     fontWeight: '600',
                     fontStyle: 'italic',
-                }} className="ml-6 mt-10">Written and published material by the #PeoplesVaccineKE campaign and its partners.</h3>
+                }} className="mt-10">Written and published material by the #PeoplesVaccineKE campaign and its partners.</h3>
                 {publications.map(publication => {
                     return (
-                        <div key={publication.id} className="my-10 ml-6">
+                        <div key={publication.id} className="my-10">
                             <Link href={`publications/${publication.slug}`}>
                                 <a>
                                     <h1 style={{
