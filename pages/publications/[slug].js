@@ -47,7 +47,6 @@ export async function getStaticPaths() {
     await client.getItems('publications')
         .then(data => {
             data.data.map(publication => {
-                console.log('the pibl', publication)
                 publications.push(publication)
             })
         })
