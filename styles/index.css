@@ -18,7 +18,7 @@
 }
 
 .publication h2{
-  font-size: 18px;
+  font-size: 24px;
   text-align: center;
   margin-top: 25px;
   margin-bottom: 20px;
@@ -79,11 +79,34 @@
   border-collapse: collapse;
   border: 3px solid #993333;
 }
+.publication table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #993333;
+}
 
 .privacy-policy td,
 .privacy-policy th {
   border: 3px solid #993333;
   padding: 3px;
+}
+
+.publication td,
+.publication th {
+  border: 1px solid #993333;
+  padding: 3px;
+}
+
+.publication ol {
+  padding: 2rem;
+  list-style-type: decimal;
+  color: #993333;
+}
+
+.publiction ol li {
+  padding: 5px;
+  margin-left: 35px;
 }
 
 /* Start purging... */
