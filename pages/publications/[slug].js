@@ -125,7 +125,7 @@ export default function PublicationPage({ publication, optOut, setOptOut, dismis
                     {publication.author}
                 </h2>
             </div>
-            <div className="mt-10 lg:mt-4 lg:mx-32 mx-8 mb-5 lg:items-center publication" dangerouslySetInnerHTML={{ __html: publication.text }}></div>
+            <div className="mt-10 lg:mt-4 lg:mx-32 mx-5 mb-5 lg:items-center publication" dangerouslySetInnerHTML={{ __html: publication.text }}></div>
             <DownloadLink data={data} error={error} pdfFilename={pdfFilename} />
         </Layout >
     )
