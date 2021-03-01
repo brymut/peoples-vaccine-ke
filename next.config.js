@@ -16,6 +16,11 @@ module.exports = withPWA({
                 source: '/youtube/locating-grief',
                 destination: 'https://www.youtube.com/watch?v=NyZpIzcbxCs',
                 permanent: true,
+            },
+            {
+                source: '/publications/a-peoples-vaccine-to-rebuild-our-economy',
+                destination: '/publications/a-people-s-vaccine-to-rebuild-our-economy',
+                permanent: true,
             }
         ]
     },
