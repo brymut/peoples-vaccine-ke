@@ -26,12 +26,12 @@ export async function getStaticProps() {
 
 export default function ShareYourVoicePage({ shareyourvoiceItems, optOut, setOptOut, dismissPrivacyBanner, setDismissPrivacyBanner }) {
     const seo = {
-        title: "Share your voice - #PeoplesVaccineKE",
+        title: "Share your voice - Peoples Vaccine Kenya - #PeoplesVaccineKE",
         description: "How you can get involved and take action in advocating for a free, accessible and safe vaccine and immediate initiation of imperative and universal healthcare in Kenya.",
         canonical: "https://peoplesvaccine.co.ke/shareyourvoice",
         openGraph: {
             url: 'https://peoplesvaccine.co.ke/shareyourvoice',
-            title: 'Share your voice - #PeoplesVaccineKE',
+            title: 'Share your voice - Peoples Vaccine Kenya - #PeoplesVaccineKE',
             description: 'How you can get involved and take action in advocating for a free, accessible and safe vaccine and immediate initiation of imperative and universal healthcare in Kenya.',
             images: [
                 {

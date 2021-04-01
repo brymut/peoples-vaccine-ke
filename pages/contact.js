@@ -33,12 +33,12 @@ export async function getStaticProps() {
 
 export default function ContactPage({ contacts, optOut, setOptOut, dismissPrivacyBanner, setDismissPrivacyBanner }) {
     const seo = {
-        title: "Contact us - #PeoplesVaccineKE",
+        title: "Contact us - Peoples Vaccine Kenya - #PeoplesVaccineKE",
         description: "Reach out to the #PeoplesVaccineKE campaign via our social media pages, instagram or twitter , email or though our website contact form.",
         canonical: "https://peoplesvaccine.co.ke/contact",
         openGraph: {
             url: 'https://peoplesvaccine.co.ke/contact',
-            title: 'Contact us - #PeoplesVaccineKE',
+            title: 'Contact us - Peoples Vaccine Kenya - #PeoplesVaccineKE',
             description: 'Reach out to the #PeoplesVaccineKE campaign via our social media pages, instagram or twitter , email or though our website contact form.',
             images: [
                 {

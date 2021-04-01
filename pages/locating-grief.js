@@ -32,12 +32,12 @@ export async function getStaticProps() {
 
 export default function LocatingGriefPage({ locatingGrief, optOut, setOptOut, dismissPrivacyBanner, setDismissPrivacyBanner }) {
     const seo = {
-        title: `${locatingGrief.title} - #PeoplesVaccineKE`,
+        title: `${locatingGrief.title} - Peoples Vaccine Kenya - #PeoplesVaccineKE`,
         description: `${locatingGrief.summary}`,
         canonical: "https://peoplesvaccine.co.ke/locating-grief",
         openGraph: {
             url: 'https://peoplesvaccine.co.ke/locating-grief',
-            title: `${locatingGrief.title} - #PeoplesVaccineKE`,
+            title: `${locatingGrief.title} - Peoples Vaccine Kenya - #PeoplesVaccineKE`,
             description: `${locatingGrief.summary}`,
             images: [
                 {
