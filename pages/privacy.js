@@ -27,12 +27,12 @@ export async function getStaticProps() {
 
 export default function PrivacyPolicyPage({ privacyPolicyHtml, optOut, setOptOut, dismissPrivacyBanner, setDismissPrivacyBanner }) {
     const seo = {
-        title: "Privacy Policy - - #PeoplesVaccineKE",
+        title: "Privacy Policy - Peoples Vaccine Kenya - #PeoplesVaccineKE",
         description: "The #PeoplesVaccineKE privacy policy statement.",
         canonical: "https://peoplesvaccine.co.ke/privacy",
         openGraph: {
             url: 'https://peoplesvaccine.co.ke/privacy',
-            title: 'Privacy Policy - #PeoplesVaccineKE',
+            title: 'Privacy Policy - Peoples Vaccine Kenya - #PeoplesVaccineKE',
             description: 'The #PeoplesVaccineKE privacy policy statement.',
             images: [
                 {

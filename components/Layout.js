@@ -1,5 +1,3 @@
-// import Alert from './alert'
-// import Footer from './footer'
 import { NextSeo } from 'next-seo';
 import Navigation from './Navigation'
 import PrivacyPolicyBanner from './privacyPolicyBanner'
@@ -17,7 +15,7 @@ export default function Layout({ children, seo, optOut, setOptOut, dismissPrivac
                     title: seo.openGraph.title,
                     description: seo.openGraph.description,
                     images: seo.openGraph.images,
-                    site_name: '#PeoplesVaccineKE',
+                    site_name: 'Peoples Vaccine Kenya #PeoplesVaccineKE',
                 }}
                 twitter={{
                     handle: '@VaccineKe',
@@ -27,7 +25,7 @@ export default function Layout({ children, seo, optOut, setOptOut, dismissPrivac
             />
             <SocialProfileJsonLd
                 type="Organisation"
-                name="#PeoplesvaccineKE"
+                name="Peoples Vaccine Kenya"
                 url="https://peoplesvaccine.co.ke"
                 sameAs={[
                     'https://www.instagram.com/peoplesvaccineke/',

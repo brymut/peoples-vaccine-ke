@@ -63,7 +63,7 @@ export default function Navigation() {
               <a>Soma kwa kiswahili</a>
             </Link>
             <Link href="/resources">
-              <a>Resources</a>
+              <a>Resources & FAQs</a>
             </Link>
             <Link href="/contact">
               <a>Contact us</a>
@@ -100,7 +100,7 @@ export default function Navigation() {
           </div>
           <div className="flex flex-col justify-around text-right">
             <Link href="/resources">
-              <a>Resources</a>
+              <a>Resources & FAQs</a>
             </Link>
             <Link href="/publications">
               <a>Publications</a>
