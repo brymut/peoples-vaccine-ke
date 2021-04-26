@@ -33,7 +33,7 @@ export default function Layout({ children, seo, optOut, setOptOut, dismissPrivac
             />
             <Navigation />
             <PrivacyPolicyBanner optOut={optOut} setOptOut={setOptOut} dismissPrivacyBanner={dismissPrivacyBanner} setDismissPrivacyBanner={setDismissPrivacyBanner} />
-            <div className="min-h-screen md:mt-24">
+            <div className="min-h-screen md:mt-10">
                 <main>{children}</main>
             </div>
         </>

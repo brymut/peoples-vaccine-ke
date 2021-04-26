@@ -4,9 +4,10 @@ import Image from 'next/image'
 
 export default function Navigation() {
   const router = useRouter()
-  if (router.pathname === "/swahili") return (
-    <>
-      <nav style={{ color: "#993333", fontSize: "14px", fontFamily: 'Montserrat', fontWeight: '700', fontStyle: 'italic', textDecoration: 'underline' }} className=" flex flex-col items-center md:hidden">
+  if (router.pathname === "/swahili")
+    return (
+      <header>
+        <nav aria-label='mobile navigation' style={{ color: "#993333", fontSize: "14px", fontFamily: 'Montserrat', fontWeight: '700', fontStyle: 'italic', textDecoration: 'underline' }} className=" flex flex-col items-center md:hidden">
         <Link href="/">
           <a>
             <Image
@@ -21,8 +22,7 @@ export default function Navigation() {
             <a className="text-center mt-5">Read in English</a>
         </Link>
       </nav>
-      <nav style={{ color: "#993333", fontSize: "18px", fontFamily: 'Montserrat', fontWeight: '700', fontStyle: 'italic', textDecoration: 'underline' }} className="hidden md:flex md:mx-32 mt-5 h-40 justify-center" >
-
+        <nav aria-label='desktop navigation' style={{ color: "#993333", fontSize: "18px", fontFamily: 'Montserrat', fontWeight: '700', fontStyle: 'italic', textDecoration: 'underline' }} className="hidden md:flex md:mx-32 mt-5 h-40 justify-center" >
         <div className="-my-10 flex flex-col" >
           <Link href="/">
             <a>
@@ -39,14 +39,16 @@ export default function Navigation() {
           </Link>
         </div>
       </nav>
-    </>
+      </header>
   )
   else
     return (
-      <>
-        <nav style={{ color: "#993333", fontSize: "14px", fontFamily: 'Montserrat', fontWeight: '700', fontStyle: 'italic', textDecoration: 'underline' }} className=" flex flex-col items-center md:hidden">
+      <header>
+        <nav aria-label='mobile navigation' style={{ color: "#993333", fontSize: "14px", fontFamily: 'Montserrat', fontWeight: '700', fontStyle: 'italic', textDecoration: 'underline' }} className="flex flex-col items-center md:hidden">
+
+          <div className="grid grid-cols-2 gap-5 justify-center text-center">
           <Link href="/">
-            <a>
+              <a className="col-start-1 col-span-2 -mt-6 -mb-4">
               <Image
                 src="/images/logo-transparent.png"
                 alt="Peoples vaccine KE logo"
@@ -54,8 +56,7 @@ export default function Navigation() {
                 height={150}
               />
             </a>
-          </Link>
-          <div className="grid grid-cols-2 gap-5 justify-center text-center">
+            </Link>
             <Link href="/shareyourvoice">
               <a>Share your voice</a>
             </Link>
@@ -74,39 +75,33 @@ export default function Navigation() {
           </Link>
         </nav>
 
-        <nav style={{ color: "#993333", fontSize: "18px", fontFamily: 'Montserrat', fontWeight: '700', fontStyle: 'italic', textDecoration: 'underline' }} className="hidden md:flex md:mx-32 mt-5 justify-between h-40" >
-          <div className="flex flex-col justify-around">
-            <Link href="/shareyourvoice">
-              <a>Share your voice</a>
-            </Link>
-            <Link href="/contact">
-              <a>Contact us</a>
-            </Link>
-          </div>
-          <div className="-my-10 flex flex-col" >
-            <Link href="/">
-              <a>
-                <Image
-                  src="/images/logo-transparent.png"
-                  alt="Peoples vaccine KE logo"
-                  width={200}
-                  height={200}
-                />
-              </a>
-            </Link>
-            <Link href="/swahili">
-              <a className="text-center">Soma kwa kiswahili</a>
-            </Link>
-          </div>
-          <div className="flex flex-col justify-around text-right">
-            <Link href="/resources">
-              <a>Resources & FAQs</a>
-            </Link>
-            <Link href="/publications">
-              <a>Publications</a>
-            </Link>
-          </div>
+        <nav aria-label='desktop navigation' style={{ color: "#993333", fontSize: "18px", fontFamily: 'Montserrat', fontWeight: '700', fontStyle: 'italic', textDecoration: 'underline' }} className="hidden md:grid grid-cols-6 gap-4 md:mx-32 mt-5 justify-between h-48">
+          <Link href="/shareyourvoice">
+            <a title="Share your voice" className="col-start-1 col-span-2" >Share your voice</a>
+          </Link>
+          <Link href="/">
+            <a title="Go to homepage" className="hidden md:block col-start-3 col-span-2 -mt-10 -mb-48" style={{ justifySelf: 'center' }}>
+            <Image
+              src="/images/logo-transparent.png"
+              alt="Peoples vaccine KE logo"
+              width={200}
+              height={200}
+            />
+            </a>
+          </Link>
+          <Link href="/resources">
+            <a title="Resources and FAQs" className="col-start-5 col-span-2 " style={{ justifySelf: 'end' }}>Resources & FAQs</a>
+          </Link>
+          <Link href="/contact">
+            <a title="Contact us" className="col-start-1 col-span-2">Contact us</a>
+          </Link>
+          <Link href="/swahili">
+            <a title="Soma kwa kiswahili" className="col-start-3 col-span-2 mt-20" style={{ justifySelf: 'center' }}>Soma kwa kiswahili</a>
+          </Link>
+          <Link href="/publications">
+            <a title="Publications" className="col-start-5 col-span-2 " style={{ justifySelf: 'end' }}>Publications</a>
+          </Link>
         </nav>
-      </>
+      </header>
     )
 }
