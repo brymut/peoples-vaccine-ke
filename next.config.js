@@ -21,6 +21,11 @@ module.exports = withPWA({
                 source: '/publications/a-peoples-vaccine-to-rebuild-our-economy',
                 destination: '/publications/a-people-s-vaccine-to-rebuild-our-economy',
                 permanent: true,
+            },
+            {
+                source: '/africa-roundtable',
+                destination: 'https://zoom.us/webinar/register/WN_cwujUyfxRAG-aeFPOx0iaA',
+                permanent: false,
             }
         ]
     },
