@@ -26,6 +26,11 @@ module.exports = withPWA({
                 source: '/africa-roundtable',
                 destination: 'https://zoom.us/webinar/register/WN_cwujUyfxRAG-aeFPOx0iaA',
                 permanent: false,
+            },
+            {
+                source: '/developing-world',
+                destination: 'https://zoom.us/webinar/register/WN_diQv59IKSl6fqjgLC29xkA',
+                permanent: false,
             }
         ]
     },
