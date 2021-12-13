@@ -35,5 +35,7 @@ module.exports = withPWA({
             {
                 source: '/vaccine-geopolitics',
                 destination: 'https://zoom.us/j/97776809539?pwd=RVRQSzFkWjdpemN3WFBwYzNKdjJEQT09GH',
-            },
-        ]},})
+            }
+        ]
+       }
+})
