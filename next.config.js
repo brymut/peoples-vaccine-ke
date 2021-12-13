@@ -31,7 +31,7 @@ module.exports = withPWA({
                 source: '/developing-world',
                 destination: 'https://zoom.us/webinar/register/WN_diQv59IKSl6fqjgLC29xkA',
                 permanent: false,
-            }
-        ]
-    },
-})
+            },
+            {
+                source: '/vaccine-geopolitics',
+                destination: 'https://zoom.us/j/97776809539?pwd=RVRQSzFkWjdpemN3WFBwYzNKdjJEQT09',
