@@ -37,6 +37,26 @@ module.exports = withPWA({
                 destination: 'https://zoom.us/webinar/register/WN_2lvmlLxbSVyM42EADC7Xsw',
                 permanent: false,
             },
+            {
+                source: '/vaccine-economics',
+                destination: 'https://zoom.us/webinar/register/WN_Nu1yy9nCSoSUYTZa1xWJGw',
+                permanent: false
+            },
+            {
+                source: '/memories-of-exclusion',
+                destination: 'https://zoom.us/webinar/register/WN_p5xPHTNdR3yLxb0CAQDZ4g',
+                permanent: false
+            },
+            {
+                source: '/tracing-just-recoveries',
+                destination: 'https://zoom.us/webinar/register/WN_kCJNa91vTguj0oYmR-CSeg',
+                permanent: false
+            },
+            {
+                source: '/abolition-as-an-imperative',
+                destination: 'https://zoom.us/webinar/register/WN_PpaP1pK4Tgae2It7rRqYJQ',
+                permanent: false
+            },
         ]
     },
 })
